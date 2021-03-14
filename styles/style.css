@@ -63,11 +63,12 @@ footer {
 
 .navigation {
   display: none;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.navigation .link {
+.navigation .link,
+.sub-menu {
   text-decoration: none;
   color: #89c069;
   font-size: 30px;
@@ -75,7 +76,7 @@ footer {
   margin: 0 45px;
 }
 
-.navigation .link:first-of-type {
+.navigation .sub-menu:first-of-type {
   margin-top: 70px;
 }
 
@@ -193,12 +194,25 @@ footer {
   margin-top: 40px;
 }
 
-.sub-menu li {
+.expandable-list {
+  display: none;
+}
+
+.expandable-list:hover {
+  cursor: pointer;
+}
+
+.expandable-list.visible {
+  display: inline-block;
+}
+
+.sub-menu .sub-menu-link {
   list-style: none;
   text-decoration: none;
   font-size: 22px;
   line-height: 50px;
   font-family: "Avenir";
+  display: none;
 }
 
 .description-text {
@@ -233,7 +247,6 @@ footer {
 
 .about {
   position: relative;
-  height: 1150px;
 }
 
 .about h2 {
@@ -251,7 +264,7 @@ footer {
   top: 127px;
   left: -10px;
   height: 898px;
-  width: 105%;
+  width: 101%;
   padding: 100px 26px;
   z-index: 1;
   background-size: cover;
@@ -282,7 +295,7 @@ footer {
   width: 100%;
   max-width: 200rem;
   margin: auto;
-  margin-top: -100px;
+  margin-top: -45px;
   background-color: #fff8eb;
   display: -ms-grid;
   display: grid;
@@ -647,19 +660,21 @@ footer {
   position: relative;
   height: 2000px;
   width: 100vw;
-  margin-top: -172px;
-  margin-left: -150px;
+  background-color: #89c069;
 }
 
 .specialists {
-  background-image: url("../img/spec-bgr.svg");
+  background-image: url("../img/Path151.svg");
   text-align: center;
   padding-top: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  width: calc(100vw + 180px);
+  width: calc(100vw + 250px);
   height: 2270px;
   position: absolute;
+  margin-top: -150px;
+  margin-left: -250px;
+  padding-left: 250px;
 }
 
 .specialists .cards {
@@ -825,6 +840,9 @@ footer {
   .description-text {
     width: 1000px;
   }
+  .about .about-description {
+    padding-top: 150px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -868,6 +886,9 @@ footer {
   }
   .main-description .texts {
     left: 200px;
+  }
+  .specialists {
+    margin-top: -200px;
   }
   .about .about-description {
     padding: 50px;
@@ -940,13 +961,20 @@ footer {
   .mobile-media {
     display: none;
   }
+  .specialists {
+    height: 2103px;
+    margin-top: -210px;
+    background-image: url("../img/spec-bgr.svg");
+    margin-left: -150px;
+    padding-left: 0;
+  }
+}
+
+.calendar {
+  top: 1500px;
 }
 
 @media screen and (min-width: 1440px) {
-  .specialists {
-    height: 2103px;
-    margin-top: -200px;
-  }
   .specialists .cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -979,6 +1007,9 @@ footer {
             justify-content: center;
     width: 60%;
     margin: 0 auto;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .send-message {
     padding: 60px 16px;
@@ -997,7 +1028,7 @@ footer {
   .send-message .car {
     position: absolute;
     top: 10%;
-    right: 15%;
+    right: 12%;
     display: block;
   }
   .send-message .contact-form {
@@ -1055,14 +1086,15 @@ footer {
   .calendar {
     top: 1100px;
   }
-  .navigation .link {
+  .navigation .link,
+  .sub-menu {
     color: #fff8eb;
     display: inline-block;
     line-height: 34px;
     margin: 0 15px;
     font-size: 25px;
   }
-  .navigation .link:first-of-type {
+  .navigation .sub-menu:first-of-type {
     margin-top: 0;
   }
   img.logo-hand {
@@ -1192,6 +1224,9 @@ footer {
     position: absolute;
     left: 25%;
     bottom: 0;
+  }
+  .send-message .car {
+    right: 15%;
   }
 }
 

@@ -11,6 +11,9 @@ const serviceDescription = document.querySelector('.service-description')
 const background = document.querySelector('.blur-background')
 const joinTrialClasses = document.querySelectorAll('.join-trial-classes')
 const popupImage = document.querySelector('.popup-image')
+const expandableList = document.querySelector('.expandable-list')
+const subLiks = document.querySelectorAll('.sub-menu-link')
+const subMenu = document.querySelector('.sub-menu')
 //toggle menu visibility
 menuButton.addEventListener('click', () => {
   menu.classList.add('menu-visible')
@@ -19,11 +22,26 @@ menuButton.addEventListener('click', () => {
 // toggle zamiast tego???
 closeMenu.addEventListener('click', () => {
   menu.classList.remove('menu-visible')
-})
+  expandableList.style.display = "none"
+  expandableList.style.transform = "rotate(180deg)"
 
+
+})
 menuLinks.forEach(link => link.addEventListener('click', () => {
   menu.classList.remove('menu-visible')
+  expandableList.style.display = "none"
+  expandableList.style.transform = "rotate(180deg)"
 }))
+
+subMenu.addEventListener('click', (e) => {
+  e.preventDefault()
+})
+expandableList.addEventListener('click', (e) => {
+  console.log(e.target)
+  subLiks.forEach(link => link.style.display = "block")
+  expandableList.style.transform = "rotate(180deg)"
+
+})
 
 // toggle services display
 options.forEach(link => link.addEventListener('click', (e) => {
@@ -32,6 +50,7 @@ options.forEach(link => link.addEventListener('click', (e) => {
   }
   const id = e.target.id - 1
   // move to another func
+  console.log(e.target.id)
   popupImage.style.backgroundImage = `url('./img/photos/${services[id].photo}')`
   popHeader.textContent = services[id].name
   popupPrice.textContent = services[id].price
@@ -61,6 +80,8 @@ joinTrialClasses.forEach(button => button.addEventListener('click', () => {
 const services = [
   {
     name: 'Diagnoza Si',
+    photo: 'diagnoza-si.jpg',
+
     price: 'Cena: 300 zł (3-4 spotkania)',
     id: 1,
     description: `Diagnoza procesów integracji sensorycznej to wywiad z rodzicami, szczegółowa obserwacja zachowania dziecka, zastosowanie odpowiednich testów oraz analiza ich wyników.<br>
@@ -69,6 +90,7 @@ const services = [
     Składa się 3-4 spotkań podczas których terapeuta obserwuje spontaniczne zachowanie dziecka podczas swobodnej zabawy, jego reakcje na stymulację sensoryczną (użycie specjalistycznego sprzętu) oraz wykonuje określone testy.`,
   }, {
     name: 'Diagnoza logopedyczna',
+    photo: 'diagnoza-logopedy.jpg',
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 2,
     description: `Głównym celem diagnozy logopedycznej jest rozpoznanie z jakimi zaburzeniami mowy mamy do czynienia u pacjenta.<br>
@@ -88,6 +110,8 @@ const services = [
     Szczegółowy wywiad pozwala na wstępne zdiagnozowanie problemu i wskazanie odpowiednich form pomocy terapeutycznej.`,
   }, {
     name: 'Terapia Si',
+    photo: 'terapia-si.jpg',
+
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 4,
     description: `Terapia SI to grupa aktywności, ćwiczeń i zabaw mających na celu stymulować ośrodek układu nerwowego oraz mózg dziecka.
@@ -96,7 +120,7 @@ const services = [
     Zaletą tej terapii jest jej indywidualny charakter dostosowany do dla każdego dziecka i jego konkretnych potrzeb.`,
   }, {
     name: 'Terapia logopedyczna',
-    photo: 'diagnoza-logopedy.jpg',
+    photo: 'terapia-logopedyczna.jpg',
 
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 5,
@@ -128,7 +152,6 @@ const services = [
   }, {
     name: 'Terapia ręki',
     photo: 'terapia-reki.jpg',
-
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 7,
     description: `
@@ -207,6 +230,7 @@ const services = [
   },
   {
     name: 'Gimnastyka korekcyjna',
+    photo: 'gimnastyka-korekcyjna.jpg',
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 11,
     description: `
@@ -226,6 +250,8 @@ const services = [
   },
   {
     name: 'Fizjoterapia',
+    photo: 'fizjoterapia.jpg',
+
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 12,
     description: `
@@ -240,7 +266,6 @@ const services = [
   {
     name: 'Sensoplastyka',
     photo: 'sensoplastyka.jpg',
-
     price: 'Cena: 300 zł (2-3 spotkania)',
     id: 13,
     description: `
@@ -253,6 +278,7 @@ const services = [
   },
   {
     name: 'Wydanie opinii',
+    photo: 'wydanie-opinii.jpg',
     price: 'Cena: 80 zł (1 spotkanie)',
     id: 14,
     description: `

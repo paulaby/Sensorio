@@ -58,17 +58,18 @@ footer {
 
 .navigation {
   display: none;
-  transition: all 2s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.navigation .link {
+.navigation .link,
+.sub-menu {
   text-decoration: none;
   color: $green;
   font-size: 30px;
   line-height: 70px;
   margin: 0 45px;
 }
-.navigation .link:first-of-type {
+.navigation .sub-menu:first-of-type {
   margin-top: 70px;
 }
 
@@ -174,13 +175,25 @@ footer {
   }
 }
 
+.expandable-list {
+  display: none;
+}
+
+.expandable-list:hover {
+  cursor: pointer;
+}
+
+.expandable-list.visible {
+  display: inline-block;
+}
 .sub-menu {
-  li {
+  .sub-menu-link {
     list-style: none;
     text-decoration: none;
     font-size: 22px;
     line-height: 50px;
     font-family: "Avenir";
+    display: none;
   }
 }
 
@@ -213,7 +226,6 @@ footer {
 // about sensorio
 .about {
   position: relative;
-  height: 1150px;
   h2 {
     margin-bottom: 50px;
     margin-left: 16px;
@@ -229,7 +241,7 @@ footer {
     top: 127px;
     left: -10px;
     height: 898px;
-    width: 105%;
+    width: 101%;
     padding: 100px 26px;
     z-index: 1;
     background-size: cover;
@@ -257,7 +269,7 @@ footer {
   width: 100%;
   max-width: 200rem;
   margin: auto;
-  margin-top: -100px;
+  margin-top: -45px;
   background-color: #fff8eb;
   display: grid;
   grid-template-columns: 1fr;
@@ -541,18 +553,20 @@ footer {
   position: relative;
   height: 2000px;
   width: 100vw;
-  margin-top: -172px;
-  margin-left: -150px;
+  background-color: $green;
 }
 .specialists {
-  background-image: url("../img/spec-bgr.svg");
+  background-image: url("../img/Path151.svg");
   text-align: center;
   padding-top: 300px;
   background-size: cover;
   background-repeat: no-repeat;
-  width: calc(100vw + 180px);
+  width: calc(100vw + 250px);
   height: 2270px;
   position: absolute;
+  margin-top: -150px;
+  margin-left: -250px;
+  padding-left: 250px;
 
   .cards {
     margin-top: 100px;
@@ -710,6 +724,9 @@ footer {
     // background-image: url("../img/Path\ 47.svg");
     width: 1000px;
   }
+  .about .about-description {
+    padding-top: 150px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -761,6 +778,9 @@ footer {
     }
   }
 
+  .specialists {
+    margin-top: -200px;
+  }
   .about .about-description {
     padding: 50px;
     width: calc(100% + 140px);
@@ -837,13 +857,20 @@ footer {
   .mobile-media {
     display: none;
   }
+  .specialists {
+    height: 2103px;
+    margin-top: -210px;
+    background-image: url("../img/spec-bgr.svg");
+    margin-left: -150px;
+    padding-left: 0;
+  }
+}
+
+.calendar {
+  top: 1500px;
 }
 
 @media screen and (min-width: 1440px) {
-  .specialists {
-    height: 2103px;
-    margin-top: -200px;
-  }
   .specialists .cards {
     flex-direction: row;
     justify-content: center;
@@ -865,6 +892,7 @@ footer {
     justify-content: center;
     width: 60%;
     margin: 0 auto;
+    align-items: flex-end;
   }
   .send-message {
     padding: 60px 16px;
@@ -884,7 +912,7 @@ footer {
     .car {
       position: absolute;
       top: 10%;
-      right: 15%;
+      right: 12%;
       display: block;
     }
     .contact-form {
@@ -939,14 +967,15 @@ footer {
     top: 1100px;
   }
 
-  .navigation .link {
+  .navigation .link,
+  .sub-menu {
     color: #fff8eb;
     display: inline-block;
     line-height: 34px;
     margin: 0 15px;
     font-size: 25px;
   }
-  .navigation .link:first-of-type {
+  .navigation .sub-menu:first-of-type {
     margin-top: 0;
   }
 
@@ -1095,6 +1124,10 @@ footer {
       left: 25%;
       bottom: 0;
     }
+  }
+
+  .send-message .car {
+    right: 15%;
   }
 }
 
