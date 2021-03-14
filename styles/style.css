@@ -1,0 +1,1310 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+main,
+footer {
+  font-family: "Avenir";
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir.ttc");
+}
+
+@font-face {
+  font-family: "Avenir next";
+  src: url("../fonts/Avenir Next.ttc");
+}
+
+@font-face {
+  font-family: "Avenir next condensed";
+  src: url("../fonts/Avenir Next Condensed.ttc");
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #89c069;
+  color: #fff8eb;
+  font-family: "Avenir next";
+}
+
+.header-logo {
+  width: 207px;
+  height: 36px;
+}
+
+.menu-hamburger {
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 18px;
+  right: 30px;
+}
+
+.navigation {
+  display: none;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.navigation .link {
+  text-decoration: none;
+  color: #89c069;
+  font-size: 30px;
+  line-height: 70px;
+  margin: 0 45px;
+}
+
+.navigation .link:first-of-type {
+  margin-top: 70px;
+}
+
+.mobile-media {
+  border-top: 1px solid #89c069;
+  font-size: 22px;
+  line-height: 35px;
+  color: black;
+  font-family: "Avenir";
+  margin: auto 45px 40px 45px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.mobile-media .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 25px;
+}
+
+.mobile-media .links .media-icon {
+  margin: 0;
+}
+
+.menu-visible.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #fff8eb;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-visible.navigation .close-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 32px;
+  right: 27px;
+  color: black;
+}
+
+.mobile-logo {
+  display: block;
+  width: 146px;
+  height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 32px;
+}
+
+.main-description,
+.help,
+.about {
+  background-color: #89c069;
+}
+
+.main-description {
+  height: 820px;
+  position: relative;
+  padding: 16px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main-description .texts {
+  position: relative;
+  top: 250px;
+  font-family: "Avenir next";
+}
+
+.main-description .texts .sub-header {
+  font-size: 16px;
+  line-height: 22px;
+  display: inline-block;
+  width: 255px;
+  margin-bottom: 20px;
+}
+
+.main-description .texts h1 {
+  font-size: 50px;
+  line-height: 57px;
+}
+
+.main-description .texts img {
+  width: 112px;
+  height: 116px;
+  margin: 20px;
+  display: block;
+}
+
+.main-description .texts button {
+  width: 273px;
+  height: 47px;
+  background-color: #e081af;
+  border: 2px solid #000;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Avenir next";
+  margin-top: 40px;
+}
+
+.sub-menu li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 50px;
+  font-family: "Avenir";
+}
+
+.description-text {
+  background-image: url("../img/Path231.svg");
+  height: 750px;
+  width: 940px;
+  position: absolute;
+  top: 45px;
+  left: -200px;
+}
+
+.boy-smile,
+.boy-hands {
+  position: absolute;
+}
+
+.boy-smile {
+  top: 30px;
+  left: 48px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.boy-hands {
+  top: 185px;
+  left: 85px;
+  z-index: 1;
+  width: 140px;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+}
+
+.about {
+  position: relative;
+  height: 1150px;
+}
+
+.about h2 {
+  margin-bottom: 50px;
+  margin-left: 16px;
+  font-size: 35px;
+  line-height: 70px;
+  font-family: "Avenir next";
+  text-align: center;
+}
+
+.about .about-description {
+  background-image: url("../img/Path232.svg");
+  position: relative;
+  top: 127px;
+  left: -10px;
+  height: 898px;
+  width: 105%;
+  padding: 100px 26px;
+  z-index: 1;
+  background-size: cover;
+}
+
+.about img {
+  position: absolute;
+}
+
+.about img.logo-hand {
+  left: 75px;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.about .right {
+  text-align: right;
+}
+
+.about .bolder {
+  font-family: "Avenir next";
+}
+
+.gallery {
+  width: 100%;
+  max-width: 200rem;
+  margin: auto;
+  margin-top: -100px;
+  background-color: #fff8eb;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 1000px;
+}
+
+.gallery .column-1 {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 0;
+  min-height: 207px;
+      grid-template-areas: "picture-1 picture-2" "picture-3 picture-3" "picture-4 picture-5";
+}
+
+.gallery .column-2 {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 0;
+  min-height: 207px;
+      grid-template-areas: "picture-6 picture-7" "picture-8 picture-7" "picture-8 picture-9";
+}
+
+.gallery .column-1 .picture,
+.gallery .column-2 .picture {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.gallery .picture-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: picture-1;
+  background-image: url("../img/photos/Zdjecie1.jpg");
+}
+
+.gallery .picture-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: picture-2;
+  background-image: url("../img/photos/Zdjecie2.jpg");
+}
+
+.gallery .picture-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: picture-3;
+  background-image: url("../img/photos/Zdjecie3.jpg");
+}
+
+.gallery .picture-4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: picture-4;
+  background-image: url("../img/photos/Zdjecie4.jpg");
+}
+
+.gallery .picture-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: picture-5;
+  background-image: url("../img/photos/Zdjecie5.jpg");
+}
+
+.gallery .picture-6 {
+  background-size: cover;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: picture-6;
+  background-image: url("../img/photos/Zdjecie6.jpg");
+}
+
+.gallery .picture-7 {
+  background-size: cover;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: picture-7;
+  background-image: url("../img/photos/Zdjecie7.jpg");
+}
+
+.gallery .picture-8 {
+  background-size: cover;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: picture-8;
+  background-image: url("../img/photos/Zdjecie8.jpg");
+}
+
+.gallery .picture-9 {
+  background-size: cover;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: picture-9;
+  background-image: url("../img/photos/Zdjecie9.jpg");
+}
+
+.footer {
+  height: 1030px;
+  background-color: #fff8eb;
+  padding-top: 70px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1 fr 1fr;
+      grid-template-rows: 1fr 1 fr 1fr;
+      grid-template-areas: "media" "hours" "contact";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.footer .footer-logo {
+  display: block;
+  margin: 0 auto;
+  width: 323px;
+  height: 55px;
+}
+
+.footer .footer-description {
+  width: 239px;
+  text-align: center;
+  margin: 25px auto;
+}
+
+.footer .media {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: media;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 45px;
+}
+
+.footer .media-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer .media-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 35px;
+}
+
+.footer .footer-working-hours {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hours;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 60px;
+  padding: 0 45px;
+}
+
+.footer .footer-working-hours ul {
+  list-style: none;
+}
+
+.footer h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.footer .working-list {
+  margin-bottom: 65px;
+}
+
+.footer .working-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  line-height: 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .contact {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contact;
+  margin: 0 16px;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.footer .contact .footer-header {
+  margin-left: 29px;
+  margin-bottom: 30px;
+}
+
+.footer .contact-icon {
+  width: 22px;
+  height: 18px;
+}
+
+.help {
+  padding: 16px;
+  text-align: center;
+}
+
+.help .info-about-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 22px;
+  text-align: left;
+}
+
+.help h2 {
+  font-size: 35px;
+  line-height: 45px;
+  font-family: "Avenir next";
+  margin: 0 27px;
+}
+
+.help span {
+  font-size: 18px;
+  line-height: 25px;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.services-button {
+  background-color: #fff8eb;
+  border: 2px solid #000;
+  border-radius: 15px;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: left;
+  padding: 38px 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Avenir next";
+  margin-bottom: 30px;
+  margin-right: 15px;
+}
+
+.services-button:hover {
+  background-color: #e081af;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+}
+
+.popup.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 90%;
+  height: 80vh;
+  z-index: 10;
+  background-color: #fff8eb;
+}
+
+.popup .popup-heading {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: "Avenir next";
+}
+
+.close-services .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.help-tiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blur-background {
+  display: none;
+}
+
+.blur-background.visible {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  height: 100vh;
+  background-color: #171717;
+  width: 100vw;
+  opacity: 0.5;
+  display: block;
+  z-index: 10;
+}
+
+.specialists-consultation {
+  position: relative;
+  height: 2000px;
+  width: 100vw;
+  margin-top: -172px;
+  margin-left: -150px;
+}
+
+.specialists {
+  background-image: url("../img/spec-bgr.svg");
+  text-align: center;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc(100vw + 180px);
+  height: 2270px;
+  position: absolute;
+}
+
+.specialists .cards {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specialists .cards .card {
+  width: 324px;
+  height: 500px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  margin: 20px;
+}
+
+.specialists .cards .card .description {
+  text-align: center;
+  padding: 16px;
+}
+
+.specialists .cards .about-spec {
+  text-align: left;
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.specialists .cards .specialist-picture {
+  position: relative;
+  right: 2px;
+  top: -2px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 324px;
+  height: auto;
+}
+
+.specialists h3 {
+  font-family: "Avenir next";
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.calendar {
+  height: 440px;
+  text-align: center;
+  padding-top: 90px;
+  position: relative;
+}
+
+.calendar .sign-for-consultation {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: "Avenir next";
+}
+
+.calendar button {
+  background-color: #fff8eb;
+  border: 2px solid #000;
+  border-radius: 15px;
+  width: 351px;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 16px 30px;
+  margin-top: 60px;
+}
+
+.calendar .blinking-star {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 16px;
+}
+
+.calendar .shamrock {
+  width: 47px;
+  height: 37px;
+  position: absolute;
+  left: 16px;
+  bottom: 50px;
+}
+
+.send-message {
+  background-color: #89c069;
+  padding: 60px 16px 16px;
+  height: 1010px;
+  text-align: center;
+}
+
+.send-message .boat {
+  width: 120px;
+  height: 55px;
+}
+
+.send-message .car {
+  display: none;
+}
+
+.contact-form {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px #000 solid;
+  border-radius: 15px;
+}
+
+.contact-form input,
+.contact-form .message {
+  border: none;
+  padding: 19px 35px;
+  font-size: 24px;
+  background-color: #fff8eb;
+  color: #6a6a6a;
+  border-bottom: 2px solid #000;
+  width: 100%;
+}
+
+.contact-form .message {
+  height: 400px;
+  border-bottom: none;
+  border-radius: 0 0 15px 15px;
+}
+
+.contact-form #name {
+  border-radius: 15px 15px 0 0;
+}
+
+.submit-form {
+  width: 80%;
+  height: 55px;
+  border-radius: 12px;
+  background-color: #fff8eb;
+  color: #6a6a6a;
+  margin-top: 30px;
+  border: 2px solid #000;
+  font-size: 24px;
+}
+
+#ask-for-consultation .second-boy {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .description-text {
+    width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description-text {
+    background-image: url("../img/Path 47.svg");
+    background-size: cover;
+    width: calc(100% + 200px);
+    height: 1250px;
+    left: -140px;
+  }
+  .main-description {
+    height: 1280px;
+  }
+  .main-description .texts .sub-header {
+    font-size: 30px;
+    width: 480px;
+    line-height: 41px;
+  }
+  .main-description .texts h1 {
+    font-size: 100px;
+    line-height: 125px;
+    width: 800px;
+  }
+  .main-description .boy-smile,
+  .main-description .boy-hands {
+    display: none;
+  }
+  .main-description .texts button {
+    width: 475px;
+    height: 81px;
+    font-size: 24px;
+    line-height: 81px;
+  }
+  .main-description .texts img {
+    width: 226px;
+    height: 216px;
+    margin: 20px;
+    position: absolute;
+    top: 332px;
+    left: 650px;
+  }
+  .main-description .texts {
+    left: 200px;
+  }
+  .about .about-description {
+    padding: 50px;
+    width: calc(100% + 140px);
+    margin-bottom: -150px;
+  }
+  .gallery {
+    height: 1000px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .popup .popup-content {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "pop-image pop-desc";
+  }
+  .footer .media,
+  .footer .footer-working-hours,
+  .footer .contact {
+    width: 50%;
+    margin: 60px auto;
+  }
+  .info-about-services {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .about .about-description {
+    background-image: url("../img/Path147.svg");
+    z-index: 1;
+    left: -130px;
+    top: 150px;
+    height: 955px;
+  }
+  .about .about-description {
+    top: 0;
+    padding: 200px 350px;
+  }
+  .about img {
+    top: 30px;
+    left: 30px;
+  }
+  .about img.logo-hand {
+    right: 100px;
+    left: auto;
+    bottom: 100px;
+    top: auto;
+  }
+  .header {
+    padding-left: 30px;
+  }
+  .header .header-logo {
+    width: 295px;
+    height: 50px;
+  }
+  .navigation {
+    display: block;
+    float: right;
+  }
+  .mobile-logo,
+  .close-icon {
+    display: none;
+  }
+  .mobile-media {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .specialists {
+    height: 2103px;
+    margin-top: -200px;
+  }
+  .specialists .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .specialists-consultation {
+    width: calc(100vw + 10rem);
+    background-color: #89c069;
+    height: 1920px;
+  }
+  .submit-form {
+    width: 325px;
+    height: 80px;
+    line-height: 80px;
+  }
+  .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .send-message {
+    padding: 60px 16px;
+    position: relative;
+  }
+  .send-message h2 {
+    font-size: 70px;
+    line-height: 125px;
+    font-family: "Avenir next";
+  }
+  .send-message .boat {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+  }
+  .send-message .car {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    display: block;
+  }
+  .send-message .contact-form {
+    width: 100%;
+    margin: 20px auto;
+  }
+  .send-message .contact-form .personal-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .send-message .contact-form .personal-data #name {
+    border-radius: 15px 0 0 0;
+    border-right: 2px solid black;
+  }
+  .send-message .contact-form .personal-data #email {
+    border-radius: 0 15px 0 0;
+  }
+  .send-message .contact-form .message {
+    z-index: 1;
+  }
+  .footer {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "hours media contact";
+    height: auto;
+    place-items: center;
+    padding: 70px 100px;
+  }
+  .footer .footer-working-hours,
+  .footer .media,
+  .footer .contact {
+    margin: 0;
+    width: 330px;
+    padding: 0;
+  }
+  .footer .contact,
+  .footer .media {
+    -ms-flex-item-align: self-start;
+        -ms-grid-row-align: self-start;
+        align-self: self-start;
+  }
+  .menu-hamburger {
+    display: none;
+  }
+  .gallery {
+    height: 1440px;
+  }
+  .calendar {
+    top: 1100px;
+  }
+  .navigation .link {
+    color: #fff8eb;
+    display: inline-block;
+    line-height: 34px;
+    margin: 0 15px;
+    font-size: 25px;
+  }
+  .navigation .link:first-of-type {
+    margin-top: 0;
+  }
+  img.logo-hand {
+    width: 227px;
+    height: 320px;
+  }
+  .popup.visible {
+    width: 1392px;
+    height: 900px;
+  }
+  .help {
+    padding: 0 200px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-description .boy-smile {
+    top: 400px;
+    right: 10%;
+    left: auto;
+    width: 378px;
+    height: 536px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    display: block;
+  }
+  .main-description .boy-hands {
+    display: block;
+    top: 760px;
+    right: 9.3%;
+    left: auto;
+    width: 355px;
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+    height: 75px;
+  }
+  .help {
+    padding: 16px 150px 16px 200px;
+  }
+  .help h2 {
+    font-size: 70px;
+    line-height: 70px;
+    margin: auto;
+    margin-bottom: 35px;
+  }
+  .help .info-about-services {
+    margin-bottom: 100px;
+  }
+  .help .info-about-services span {
+    font-size: 30px;
+    line-height: 41px;
+  }
+  .help .help-tiles .services-button {
+    margin-right: 45px;
+    font-size: 35px;
+    line-height: 48px;
+    padding: 35px;
+  }
+  .help .help-tiles .services-button:nth-of-type(7), .help .help-tiles .services-button:last-of-type {
+    margin-right: 0;
+  }
+  .about h2 {
+    font-size: 70px;
+    line-height: 70px;
+    padding-top: 200px;
+  }
+  .about .about-description {
+    top: 0;
+    padding: 200px 350px;
+    height: 1020px;
+    margin-bottom: -160px;
+  }
+  .about .about-description p {
+    font-size: 30px;
+  }
+  .about img {
+    width: 391px;
+    height: 498px;
+    top: 30px;
+    left: 30px;
+  }
+  .about img.logo-hand {
+    width: 227px;
+    height: 320px;
+    right: 100px;
+    left: auto;
+    bottom: 100px;
+    top: auto;
+  }
+  #ask-for-consultation .second-boy {
+    position: absolute;
+    top: -300px;
+    right: -210px;
+    display: block;
+  }
+  .specialists h2 {
+    font-size: 70px;
+    line-height: 70px;
+    font-family: "Avenir next";
+  }
+  .footer {
+    padding: 100px 145px 50px 200px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .calendar .sign-for-consultation {
+    font-size: 100px;
+    line-height: 125px;
+  }
+  .calendar button {
+    width: 655px;
+    height: 130px;
+    margin-top: 80px;
+    font-size: 35px;
+    line-height: 48px;
+  }
+  .calendar .blinking-star {
+    top: 270px;
+    right: 500px;
+    width: 62px;
+    height: 62px;
+  }
+  .calendar .shamrock {
+    width: 93px;
+    height: 75px;
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+  }
+}
+
+.image-view {
+  position: fixed;
+  top: 0%;
+  height: 100vh;
+  background-color: #171717;
+  width: 100vw;
+  opacity: 0.5;
+  z-index: 1;
+  display: none;
+}
+
+.image-box {
+  width: 50vw;
+  height: 80vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1;
+  background-size: cover;
+}
+
+.prev-btn,
+.next-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  z-index: 1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  opacity: 0.7;
+}
+
+.prev-btn {
+  left: -100px;
+}
+
+.next-btn {
+  right: -100px;
+}
+
+@media screen and (max-width: 480px) {
+  .image-box {
+    width: 90vw;
+    height: 70vh;
+  }
+  .prev-btn {
+    left: -20px;
+  }
+  .next-btn {
+    right: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .image-box {
+    width: 70vw;
+    height: 80vh;
+  }
+  .prev-btn {
+    left: -80px;
+  }
+  .next-btn {
+    right: -30px;
+  }
+}
+
+.popup-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "pop-desc" "pop-image";
+}
+
+.popup-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-x: -100px;
+  border-radius: 15px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: pop-image;
+  background-repeat: no-repeat;
+}
+
+.popup .popup-price {
+  font-size: 35px;
+  line-height: 48px;
+  margin-left: 0;
+}
+
+.popup .popup-description {
+  text-align: start;
+  padding: 90px 40px 30px 40px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pop-desc;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1204 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+main,
+footer {
+  font-family: "Avenir";
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+// fonts
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/Avenir.ttc");
+}
+@font-face {
+  font-family: "Avenir next";
+  src: url("../fonts/Avenir\ Next.ttc");
+}
+@font-face {
+  font-family: "Avenir next condensed";
+  src: url("../fonts/Avenir\ Next\ Condensed.ttc");
+}
+
+// header
+.header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $green;
+  color: $light;
+  font-family: "Avenir next";
+}
+
+.header-logo {
+  width: 207px;
+  height: 36px;
+}
+
+.menu-hamburger {
+  display: block;
+  position: absolute;
+  width: 27px;
+  height: 18px;
+  right: 30px;
+}
+
+.navigation {
+  display: none;
+  transition: all 2s ease-in-out;
+}
+
+.navigation .link {
+  text-decoration: none;
+  color: $green;
+  font-size: 30px;
+  line-height: 70px;
+  margin: 0 45px;
+}
+.navigation .link:first-of-type {
+  margin-top: 70px;
+}
+
+.mobile-media {
+  border-top: 1px solid #89c069;
+  font-size: 22px;
+  line-height: 35px;
+  color: black;
+  font-family: "Avenir";
+  margin: auto 45px 40px 45px;
+  padding-top: 30px;
+  text-align: center;
+  .links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+    .media-icon {
+      margin: 0;
+    }
+  }
+}
+
+.menu-visible.navigation {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: $light;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  flex-direction: column;
+  // justify-content: space-between;
+  .close-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 32px;
+    right: 27px;
+    color: black;
+  }
+}
+
+.mobile-logo {
+  display: block;
+  width: 146px;
+  height: auto;
+  align-self: center;
+  margin-top: 32px;
+}
+
+// short description
+.main-description,
+.help,
+.about {
+  background-color: $green;
+}
+.main-description {
+  height: 820px;
+  position: relative;
+  padding: 16px;
+  width: 100vw;
+  overflow: hidden;
+
+  .texts {
+    position: relative;
+    top: 250px;
+    font-family: "Avenir next";
+
+    .sub-header {
+      font-size: 16px;
+      line-height: 22px;
+      display: inline-block;
+      width: 255px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 50px;
+      line-height: 57px;
+    }
+
+    img {
+      width: 112px;
+      height: 116px;
+      margin: 20px;
+      display: block;
+    }
+
+    button {
+      width: 273px;
+      height: 47px;
+      background-color: $dark-pink;
+      border: 2px solid $black;
+      border-radius: 15px;
+      font-size: 14px;
+      line-height: 19px;
+      font-family: "Avenir next";
+
+      margin-top: 40px;
+    }
+  }
+}
+
+.sub-menu {
+  li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 50px;
+    font-family: "Avenir";
+  }
+}
+
+.description-text {
+  background-image: url("../img/Path231.svg");
+  height: 750px;
+  width: 940px;
+  position: absolute;
+  top: 45px;
+  left: -200px;
+}
+.boy-smile,
+.boy-hands {
+  position: absolute;
+}
+
+.boy-smile {
+  top: 30px;
+  left: 48px;
+  transform: rotate(-5deg);
+}
+.boy-hands {
+  top: 185px;
+  left: 85px;
+  z-index: 1;
+  width: 140px;
+  transform: rotate(-4deg);
+}
+
+// about sensorio
+.about {
+  position: relative;
+  height: 1150px;
+  h2 {
+    margin-bottom: 50px;
+    margin-left: 16px;
+    font-size: 35px;
+    line-height: 70px;
+    font-family: "Avenir next";
+    text-align: center;
+  }
+
+  .about-description {
+    background-image: url("../img/Path232.svg");
+    position: relative;
+    top: 127px;
+    left: -10px;
+    height: 898px;
+    width: 105%;
+    padding: 100px 26px;
+    z-index: 1;
+    background-size: cover;
+  }
+  img {
+    position: absolute;
+  }
+  img.logo-hand {
+    left: 75px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .right {
+    text-align: right;
+  }
+  .bolder {
+    font-family: "Avenir next";
+  }
+}
+
+// gallery
+.gallery {
+  width: 100%;
+  max-width: 200rem;
+  margin: auto;
+  margin-top: -100px;
+  background-color: #fff8eb;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 1000px;
+
+  .column-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    min-height: 207px;
+    grid-template-areas:
+      "picture-1 picture-2"
+      "picture-3 picture-3"
+      "picture-4 picture-5";
+  }
+
+  .column-2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    min-height: 207px;
+    grid-template-areas:
+      "picture-6 picture-7"
+      "picture-8 picture-7"
+      "picture-8 picture-9";
+  }
+
+  .column-1 .picture,
+  .column-2 .picture {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .picture-1 {
+    grid-area: picture-1;
+    background-image: url("../img/photos/Zdjecie1.jpg");
+  }
+
+  .picture-2 {
+    grid-area: picture-2;
+    background-image: url("../img/photos/Zdjecie2.jpg");
+  }
+
+  .picture-3 {
+    grid-area: picture-3;
+    background-image: url("../img/photos/Zdjecie3.jpg");
+  }
+
+  .picture-4 {
+    grid-area: picture-4;
+    background-image: url("../img/photos/Zdjecie4.jpg");
+  }
+
+  .picture-5 {
+    grid-area: picture-5;
+    background-image: url("../img/photos/Zdjecie5.jpg");
+  }
+
+  .picture-6 {
+    background-size: cover;
+    grid-area: picture-6;
+    background-image: url("../img/photos/Zdjecie6.jpg");
+  }
+
+  .picture-7 {
+    background-size: cover;
+    grid-area: picture-7;
+    background-image: url("../img/photos/Zdjecie7.jpg");
+  }
+
+  .picture-8 {
+    background-size: cover;
+    grid-area: picture-8;
+    background-image: url("../img/photos/Zdjecie8.jpg");
+  }
+
+  .picture-9 {
+    background-size: cover;
+    grid-area: picture-9;
+    background-image: url("../img/photos/Zdjecie9.jpg");
+  }
+}
+
+// footer
+.footer {
+  height: 1030px;
+  background-color: $light;
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1 fr 1fr;
+  grid-template-areas:
+    "media"
+    "hours" "contact";
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  overflow: hidden;
+
+  .footer-logo {
+    display: block;
+    margin: 0 auto;
+    width: 323px;
+    height: 55px;
+  }
+
+  .footer-description {
+    width: 239px;
+    text-align: center;
+    margin: 25px auto;
+  }
+
+  .media {
+    grid-area: media;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 45px;
+  }
+
+  .media-links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .media-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 35px;
+  }
+  .footer-working-hours {
+    grid-area: hours;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 60px;
+    padding: 0 45px;
+    ul {
+      list-style: none;
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .working-list {
+    margin-bottom: 65px;
+  }
+
+  .working-list li {
+    display: flex;
+    font-size: 25px;
+    line-height: 35px;
+    justify-content: space-between;
+  }
+
+  .contact {
+    grid-area: contact;
+    margin: 0 16px;
+    font-size: 25px;
+    line-height: 35px;
+    .footer-header {
+      margin-left: 29px;
+      margin-bottom: 30px;
+    }
+  }
+  .contact-icon {
+    width: 22px;
+    height: 18px;
+  }
+}
+
+// services
+.help {
+  padding: 16px;
+  text-align: center;
+  .info-about-services {
+    display: flex;
+    margin: 30px 22px;
+    text-align: left;
+  }
+  h2 {
+    font-size: 35px;
+    line-height: 45px;
+    font-family: "Avenir next";
+    margin: 0 27px;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+.services-button {
+  background-color: $light;
+  border: 2px solid $black;
+  border-radius: 15px;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: left;
+  padding: 38px 40px;
+  width: fit-content;
+  font-family: "Avenir next";
+  margin-bottom: 30px;
+  margin-right: 15px;
+  &:hover {
+    background-color: $dark-pink;
+    cursor: pointer;
+  }
+}
+
+// popup
+.popup {
+  display: none;
+}
+.popup.visible {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 90%;
+  height: 80vh;
+  z-index: 10;
+  background-color: $light;
+}
+
+.popup .popup-heading {
+  font-size: 70px;
+  line-height: 70px;
+  font-weight: "Avenir next";
+}
+
+.close-services .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.help-tiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blur-background {
+  display: none;
+}
+.blur-background.visible {
+  position: fixed;
+  top: 0%;
+  left: 0;
+  height: 100vh;
+  background-color: #171717;
+  width: 100vw;
+  opacity: 0.5;
+  display: block;
+  z-index: 10;
+}
+
+//card - specialists
+
+.specialists-consultation {
+  position: relative;
+  height: 2000px;
+  width: 100vw;
+  margin-top: -172px;
+  margin-left: -150px;
+}
+.specialists {
+  background-image: url("../img/spec-bgr.svg");
+  text-align: center;
+  padding-top: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: calc(100vw + 180px);
+  height: 2270px;
+  position: absolute;
+
+  .cards {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+      width: 324px;
+      height: 500px;
+      border-radius: 15px;
+      border: 2px solid $black;
+      margin: 20px;
+
+      .description {
+        text-align: center;
+        padding: 16px;
+      }
+    }
+    .about-spec {
+      text-align: left;
+      padding-top: 20px;
+      font-size: 20px;
+      line-height: 28px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+    }
+
+    .specialist-picture {
+      position: relative;
+      right: 2px;
+      top: -2px;
+      border: 2px solid black;
+      border-radius: 15px;
+      width: 324px;
+      height: auto;
+    }
+  }
+  h3 {
+    font-family: "Avenir next";
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+// calendar
+.calendar {
+  height: 440px;
+  text-align: center;
+  padding-top: 90px;
+  position: relative;
+
+  .sign-for-consultation {
+    font-size: 50px;
+    line-height: 60px;
+    font-family: "Avenir next";
+  }
+
+  button {
+    background-color: $light;
+    border: 2px solid $black;
+    border-radius: 15px;
+    width: 351px;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 16px 30px;
+    margin-top: 60px;
+  }
+
+  .blinking-star {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 16px;
+  }
+
+  .shamrock {
+    width: 47px;
+    height: 37px;
+    position: absolute;
+    left: 16px;
+    bottom: 50px;
+  }
+}
+
+// consultation
+
+.send-message {
+  background-color: $green;
+  padding: 60px 16px 16px;
+  height: 1010px;
+  text-align: center;
+
+  .boat {
+    width: 120px;
+    height: 55px;
+  }
+
+  .car {
+    display: none;
+  }
+}
+
+.contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 2px $black solid;
+  border-radius: 15px;
+
+  input,
+  .message {
+    border: none;
+    padding: 19px 35px;
+    font-size: 24px;
+    background-color: $light;
+    color: $cl-gray;
+    border-bottom: 2px solid $black;
+    width: 100%;
+  }
+  .message {
+    height: 400px;
+    border-bottom: none;
+    border-radius: 0 0 15px 15px;
+  }
+  #name {
+    border-radius: 15px 15px 0 0;
+  }
+}
+
+.submit-form {
+  width: 80%;
+  height: 55px;
+  border-radius: 12px;
+  background-color: $light;
+  color: $cl-gray;
+  margin-top: 30px;
+  border: 2px solid #000;
+  font-size: 24px;
+}
+
+#ask-for-consultation {
+  .second-boy {
+    display: none;
+  }
+}
+
+// media
+
+@media screen and (min-width: 768px) {
+  .description-text {
+    // background-image: url("../img/Path\ 47.svg");
+    width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description-text {
+    background-image: url("../img/Path\ 47.svg");
+    background-size: cover;
+    width: calc(100% + 200px);
+    height: 1250px;
+    left: -140px;
+  }
+
+  .main-description {
+    height: 1280px;
+
+    .texts .sub-header {
+      font-size: 30px;
+      width: 480px;
+      line-height: 41px;
+    }
+
+    .texts h1 {
+      font-size: 100px;
+      line-height: 125px;
+      width: 800px;
+    }
+
+    .boy-smile,
+    .boy-hands {
+      display: none;
+    }
+
+    .texts button {
+      width: 475px;
+      height: 81px;
+      font-size: 24px;
+      line-height: 81px;
+    }
+
+    .texts img {
+      width: 226px;
+      height: 216px;
+      margin: 20px;
+      position: absolute;
+      top: 332px;
+      left: 650px;
+    }
+    .texts {
+      left: 200px;
+    }
+  }
+
+  .about .about-description {
+    padding: 50px;
+    width: calc(100% + 140px);
+    margin-bottom: -150px;
+  }
+
+  .gallery {
+    height: 1000px;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+  }
+
+  .popup .popup-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "pop-image pop-desc";
+  }
+
+  .footer {
+    .media,
+    .footer-working-hours,
+    .contact {
+      width: 50%;
+      margin: 60px auto;
+    }
+  }
+  .info-about-services {
+    justify-content: center;
+  }
+
+  .about .about-description {
+    background-image: url("../img/Path147.svg");
+    z-index: 1;
+    left: -130px;
+    top: 150px;
+    height: 955px;
+  }
+
+  .about {
+    .about-description {
+      top: 0;
+      padding: 200px 350px;
+    }
+
+    img {
+      top: 30px;
+      left: 30px;
+    }
+    img.logo-hand {
+      right: 100px;
+      left: auto;
+      bottom: 100px;
+      top: auto;
+    }
+  }
+  .header {
+    padding-left: 30px;
+    .header-logo {
+      width: 295px;
+      height: 50px;
+    }
+  }
+
+  .navigation {
+    display: block;
+    float: right;
+  }
+
+  .mobile-logo,
+  .close-icon {
+    display: none;
+  }
+
+  .mobile-media {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .specialists {
+    height: 2103px;
+    margin-top: -200px;
+  }
+  .specialists .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .specialists-consultation {
+    width: calc(100vw + 10rem);
+    background-color: $green;
+    height: 1920px;
+  }
+
+  .submit-form {
+    width: 325px;
+    height: 80px;
+    line-height: 80px;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .send-message {
+    padding: 60px 16px;
+    position: relative;
+
+    h2 {
+      font-size: 70px;
+      line-height: 125px;
+      font-family: "Avenir next";
+    }
+    .boat {
+      position: absolute;
+      top: 50%;
+      left: 15%;
+    }
+
+    .car {
+      position: absolute;
+      top: 10%;
+      right: 15%;
+      display: block;
+    }
+    .contact-form {
+      width: 100%;
+      margin: 20px auto;
+      .personal-data {
+        display: flex;
+        flex-direction: row;
+        #name {
+          border-radius: 15px 0 0 0;
+          border-right: 2px solid black;
+        }
+        #email {
+          border-radius: 0 15px 0 0;
+        }
+      }
+      .message {
+        z-index: 1;
+      }
+    }
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "hours media contact";
+    height: auto;
+    place-items: center;
+    padding: 70px 100px;
+    .footer-working-hours,
+    .media,
+    .contact {
+      margin: 0;
+      width: 330px;
+      padding: 0;
+    }
+
+    .contact,
+    .media {
+      align-self: self-start;
+    }
+  }
+
+  .menu-hamburger {
+    display: none;
+  }
+
+  .gallery {
+    height: 1440px;
+  }
+
+  .calendar {
+    top: 1100px;
+  }
+
+  .navigation .link {
+    color: #fff8eb;
+    display: inline-block;
+    line-height: 34px;
+    margin: 0 15px;
+    font-size: 25px;
+  }
+  .navigation .link:first-of-type {
+    margin-top: 0;
+  }
+
+  img.logo-hand {
+    width: 227px;
+    height: 320px;
+  }
+
+  .popup.visible {
+    width: 1392px;
+    height: 900px;
+  }
+
+  .help {
+    padding: 0 200px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-description .boy-smile {
+    top: 400px;
+    right: 10%;
+    left: auto;
+    width: 378px;
+    height: 536px;
+    transform: rotate(0deg);
+    display: block;
+  }
+
+  .main-description .boy-hands {
+    display: block;
+    top: 760px;
+    right: 9.3%;
+    left: auto;
+    width: 355px;
+    transform: rotate(-2deg);
+    height: 75px;
+  }
+  .help {
+    padding: 16px 150px 16px 200px;
+
+    h2 {
+      font-size: 70px;
+      line-height: 70px;
+      margin: auto;
+      margin-bottom: 35px;
+    }
+    .info-about-services {
+      margin-bottom: 100px;
+    }
+    .info-about-services span {
+      font-size: 30px;
+      line-height: 41px;
+    }
+
+    .help-tiles {
+      .services-button {
+        margin-right: 45px;
+        font-size: 35px;
+        line-height: 48px;
+        padding: 35px;
+        &:nth-of-type(7),
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .about {
+    h2 {
+      font-size: 70px;
+      line-height: 70px;
+      padding-top: 200px;
+    }
+
+    .about-description {
+      top: 0;
+      padding: 200px 350px;
+      height: 1020px;
+      margin-bottom: -160px;
+      p {
+        font-size: 30px;
+      }
+    }
+
+    img {
+      width: 391px;
+      height: 498px;
+      top: 30px;
+      left: 30px;
+    }
+    img.logo-hand {
+      width: 227px;
+      height: 320px;
+      right: 100px;
+      left: auto;
+      bottom: 100px;
+      top: auto;
+    }
+  }
+
+  #ask-for-consultation {
+    .second-boy {
+      position: absolute;
+      top: -300px;
+      right: -210px;
+      display: block;
+    }
+  }
+
+  .specialists {
+    h2 {
+      font-size: 70px;
+      line-height: 70px;
+      font-family: "Avenir next";
+    }
+  }
+  .footer {
+    padding: 100px 145px 50px 200px;
+    justify-content: space-between;
+  }
+
+  .calendar {
+    .sign-for-consultation {
+      font-size: 100px;
+      line-height: 125px;
+    }
+
+    button {
+      width: 655px;
+      height: 130px;
+      margin-top: 80px;
+      font-size: 35px;
+      line-height: 48px;
+    }
+    .blinking-star {
+      top: 270px;
+      right: 500px;
+      width: 62px;
+      height: 62px;
+    }
+    .shamrock {
+      width: 93px;
+      height: 75px;
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+    }
+  }
+}
+
+// gallery
+.image-view {
+  position: fixed;
+  top: 0%;
+  height: 100vh;
+  background-color: #171717;
+  width: 100vw;
+  opacity: 0.5;
+  z-index: 1;
+  display: none;
+}
+
+.image-box {
+  width: 50vw;
+  height: 80vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 1;
+  background-size: cover;
+}
+
+.prev-btn,
+.next-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%);
+  z-index: 1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.prev-btn {
+  left: -100px;
+}
+
+.next-btn {
+  right: -100px;
+}
+
+@media screen and (max-width: 480px) {
+  .image-box {
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .prev-btn {
+    left: -20px;
+  }
+
+  .next-btn {
+    right: 30px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .image-box {
+    width: 70vw;
+    height: 80vh;
+  }
+
+  .prev-btn {
+    left: -80px;
+  }
+
+  .next-btn {
+    right: -30px;
+  }
+}
+
+.popup-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pop-desc" "pop-image";
+}
+
+.popup-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-x: -100px;
+  border-radius: 15px;
+  grid-area: pop-image;
+  background-repeat: no-repeat;
+}
+.popup .popup-price {
+  font-size: 35px;
+  line-height: 48px;
+  margin-left: 0;
+}
+
+.popup .popup-description {
+  text-align: start;
+  padding: 90px 40px 30px 40px;
+  grid-area: pop-desc;
+}
