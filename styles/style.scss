@@ -241,7 +241,7 @@ footer {
     top: 127px;
     left: -10px;
     height: 898px;
-    width: 101%;
+    width: 103%;
     padding: 100px 26px;
     z-index: 1;
     background-size: cover;
@@ -269,7 +269,7 @@ footer {
   width: 100%;
   max-width: 200rem;
   margin: auto;
-  margin-top: -45px;
+  margin-top: 90px;
   background-color: #fff8eb;
   display: grid;
   grid-template-columns: 1fr;
@@ -465,14 +465,14 @@ footer {
     margin: 30px 22px;
     text-align: left;
   }
-  h2 {
+  .help-header {
     font-size: 35px;
     line-height: 45px;
     font-family: "Avenir next";
     margin: 0 27px;
   }
 
-  span {
+  .help-sub-header {
     font-size: 18px;
     line-height: 25px;
     display: inline-block;
@@ -501,25 +501,47 @@ footer {
 // popup
 .popup {
   display: none;
-}
-.popup.visible {
-  display: flex;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid black;
-  border-radius: 15px;
-  width: 90%;
-  height: 80vh;
-  z-index: 10;
-  background-color: $light;
-}
-
-.popup .popup-heading {
-  font-size: 70px;
-  line-height: 70px;
-  font-weight: "Avenir next";
+  &.visible {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 90%;
+    height: 80vh;
+    z-index: 10;
+    background-color: $light;
+  }
+  .content {
+    width: 100%;
+  }
+  .popup-description {
+    padding: 1rem;
+    text-align: left;
+  }
+  .popup-heading {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: "Avenir";
+  }
+  .popup-price {
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .popup-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 0 0 15px 15px;
+    grid-area: pop-image;
+    background-repeat: no-repeat;
+  }
 }
 
 .close-services .close {
@@ -781,16 +803,12 @@ footer {
   .specialists {
     margin-top: -200px;
   }
-  .about .about-description {
-    padding: 50px;
-    width: calc(100% + 140px);
-    margin-bottom: -150px;
-  }
 
   .gallery {
     height: 1000px;
     grid-template-columns: 1fr 1fr;
     flex-direction: row;
+    margin-top: 45px;
   }
 
   .popup .popup-content {
@@ -811,18 +829,17 @@ footer {
     justify-content: center;
   }
 
-  .about .about-description {
-    background-image: url("../img/Path147.svg");
-    z-index: 1;
-    left: -130px;
-    top: 150px;
-    height: 955px;
-  }
-
   .about {
     .about-description {
-      top: 0;
-      padding: 200px 350px;
+      width: calc(100% + 140px);
+      margin-bottom: -150px;
+      margin-top: -120px;
+      padding: 200px 250px;
+      background-image: url("../img/Path147.svg");
+      z-index: 1;
+      left: -130px;
+      top: 150px;
+      height: 955px;
     }
 
     img {
@@ -893,6 +910,12 @@ footer {
     width: 60%;
     margin: 0 auto;
     align-items: flex-end;
+  }
+
+  .about .about-description {
+    width: calc(100% + 140px);
+    margin-bottom: -150px;
+    padding: 200px 350px;
   }
   .send-message {
     padding: 60px 16px;
@@ -985,8 +1008,32 @@ footer {
   }
 
   .popup.visible {
-    width: 1392px;
-    height: 900px;
+    .popup-heading {
+      font-size: 70px;
+      line-height: 70px;
+      font-weight: "Avenir next";
+    }
+
+    .popup-description {
+      text-align: start;
+      padding: 90px 40px 30px 40px;
+      grid-area: pop-desc;
+    }
+
+    .popup-price {
+      font-size: 35px;
+      line-height: 48px;
+      margin-left: 0;
+    }
+    .popup-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position-x: -100px;
+      border-radius: 15px;
+      grid-area: pop-image;
+      background-repeat: no-repeat;
+    }
   }
 
   .help {
@@ -1044,6 +1091,12 @@ footer {
       }
     }
   }
+
+  .popup.visible {
+    width: 1392px;
+    height: 900px;
+  }
+
   .about {
     h2 {
       font-size: 70px;
@@ -1053,7 +1106,6 @@ footer {
 
     .about-description {
       top: 0;
-      padding: 200px 350px;
       height: 1020px;
       margin-bottom: -160px;
       p {
@@ -1157,8 +1209,8 @@ footer {
 
 .prev-btn,
 .next-btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
   transform: translate(50%);
@@ -1186,14 +1238,14 @@ footer {
   }
 
   .prev-btn {
-    left: -20px;
+    left: -10px;
   }
 
   .next-btn {
-    right: 30px;
+    right: 20px;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .image-box {
     width: 70vw;
     height: 80vh;
@@ -1206,6 +1258,11 @@ footer {
   .next-btn {
     right: -30px;
   }
+  .prev-btn,
+  .next-btn {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .popup-content {
@@ -1213,25 +1270,4 @@ footer {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "pop-desc" "pop-image";
-}
-
-.popup-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position-x: -100px;
-  border-radius: 15px;
-  grid-area: pop-image;
-  background-repeat: no-repeat;
-}
-.popup .popup-price {
-  font-size: 35px;
-  line-height: 48px;
-  margin-left: 0;
-}
-
-.popup .popup-description {
-  text-align: start;
-  padding: 90px 40px 30px 40px;
-  grid-area: pop-desc;
 }

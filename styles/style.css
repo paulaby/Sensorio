@@ -264,7 +264,7 @@ footer {
   top: 127px;
   left: -10px;
   height: 898px;
-  width: 101%;
+  width: 103%;
   padding: 100px 26px;
   z-index: 1;
   background-size: cover;
@@ -295,7 +295,7 @@ footer {
   width: 100%;
   max-width: 200rem;
   margin: auto;
-  margin-top: -45px;
+  margin-top: 90px;
   background-color: #fff8eb;
   display: -ms-grid;
   display: grid;
@@ -564,14 +564,14 @@ footer {
   text-align: left;
 }
 
-.help h2 {
+.help .help-header {
   font-size: 35px;
   line-height: 45px;
   font-family: "Avenir next";
   margin: 0 27px;
 }
 
-.help span {
+.help .help-sub-header {
   font-size: 18px;
   line-height: 25px;
   display: inline-block;
@@ -620,10 +620,39 @@ footer {
   background-color: #fff8eb;
 }
 
+.popup .content {
+  width: 100%;
+}
+
+.popup .popup-description {
+  padding: 1rem;
+  text-align: left;
+}
+
 .popup .popup-heading {
-  font-size: 70px;
-  line-height: 70px;
-  font-weight: "Avenir next";
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: "Avenir";
+}
+
+.popup .popup-price {
+  font-size: 18px;
+  line-height: 25px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.popup .popup-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-y: center;
+  border-radius: 0 0 15px 15px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: pop-image;
+  background-repeat: no-repeat;
 }
 
 .close-services .close {
@@ -890,11 +919,6 @@ footer {
   .specialists {
     margin-top: -200px;
   }
-  .about .about-description {
-    padding: 50px;
-    width: calc(100% + 140px);
-    margin-bottom: -150px;
-  }
   .gallery {
     height: 1000px;
     -ms-grid-columns: 1fr 1fr;
@@ -903,6 +927,7 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 45px;
   }
   .popup .popup-content {
     -ms-grid-columns: 1fr 1fr;
@@ -923,15 +948,15 @@ footer {
             justify-content: center;
   }
   .about .about-description {
+    width: calc(100% + 140px);
+    margin-bottom: -150px;
+    margin-top: -120px;
+    padding: 200px 250px;
     background-image: url("../img/Path147.svg");
     z-index: 1;
     left: -130px;
     top: 150px;
     height: 955px;
-  }
-  .about .about-description {
-    top: 0;
-    padding: 200px 350px;
   }
   .about img {
     top: 30px;
@@ -1010,6 +1035,11 @@ footer {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .about .about-description {
+    width: calc(100% + 140px);
+    margin-bottom: -150px;
+    padding: 200px 350px;
   }
   .send-message {
     padding: 60px 16px;
@@ -1101,9 +1131,33 @@ footer {
     width: 227px;
     height: 320px;
   }
-  .popup.visible {
-    width: 1392px;
-    height: 900px;
+  .popup.visible .popup-heading {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: "Avenir next";
+  }
+  .popup.visible .popup-description {
+    text-align: start;
+    padding: 90px 40px 30px 40px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: pop-desc;
+  }
+  .popup.visible .popup-price {
+    font-size: 35px;
+    line-height: 48px;
+    margin-left: 0;
+  }
+  .popup.visible .popup-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position-x: -100px;
+    border-radius: 15px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: pop-image;
+    background-repeat: no-repeat;
   }
   .help {
     padding: 0 200px;
@@ -1156,6 +1210,10 @@ footer {
   .help .help-tiles .services-button:nth-of-type(7), .help .help-tiles .services-button:last-of-type {
     margin-right: 0;
   }
+  .popup.visible {
+    width: 1392px;
+    height: 900px;
+  }
   .about h2 {
     font-size: 70px;
     line-height: 70px;
@@ -1163,7 +1221,6 @@ footer {
   }
   .about .about-description {
     top: 0;
-    padding: 200px 350px;
     height: 1020px;
     margin-bottom: -160px;
   }
@@ -1256,8 +1313,8 @@ footer {
 
 .prev-btn,
 .next-btn {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
   -webkit-transform: translate(50%);
@@ -1287,14 +1344,14 @@ footer {
     height: 70vh;
   }
   .prev-btn {
-    left: -20px;
+    left: -10px;
   }
   .next-btn {
-    right: 30px;
+    right: 20px;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 481px) {
   .image-box {
     width: 70vw;
     height: 80vh;
@@ -1304,6 +1361,11 @@ footer {
   }
   .next-btn {
     right: -30px;
+  }
+  .prev-btn,
+  .next-btn {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -1315,31 +1377,5 @@ footer {
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "pop-desc" "pop-image";
-}
-
-.popup-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position-x: -100px;
-  border-radius: 15px;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: pop-image;
-  background-repeat: no-repeat;
-}
-
-.popup .popup-price {
-  font-size: 35px;
-  line-height: 48px;
-  margin-left: 0;
-}
-
-.popup .popup-description {
-  text-align: start;
-  padding: 90px 40px 30px 40px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: pop-desc;
 }
 /*# sourceMappingURL=style.css.map */
