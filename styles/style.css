@@ -17,6 +17,17 @@ footer {
   width: 100vw;
 }
 
+button,
+.submit-form {
+  outline: none;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: "Avenir next";
+}
+
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir.ttc");
@@ -217,6 +228,7 @@ footer {
 
 .description-text {
   background-image: url("../img/Path231.svg");
+  background-size: 940px 750px;
   height: 750px;
   width: 940px;
   position: absolute;
@@ -252,9 +264,7 @@ footer {
 .about h2 {
   margin-bottom: 50px;
   margin-left: 16px;
-  font-size: 35px;
   line-height: 70px;
-  font-family: "Avenir next";
   text-align: center;
 }
 
@@ -301,7 +311,7 @@ footer {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  height: 1000px;
+  height: 1400px;
 }
 
 .gallery .column-1 {
@@ -348,6 +358,11 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+
+.gallery .picture.lazy {
+  background-image: none;
+  background-color: #89c069;
 }
 
 .gallery .picture-1 {
@@ -565,9 +580,7 @@ footer {
 }
 
 .help .help-header {
-  font-size: 35px;
   line-height: 45px;
-  font-family: "Avenir next";
   margin: 0 27px;
 }
 
@@ -694,16 +707,20 @@ footer {
 
 .specialists {
   background-image: url("../img/Path151.svg");
+  background-position-x: center;
   text-align: center;
-  padding-top: 300px;
-  background-size: cover;
+  padding-top: 180px;
+  background-size: 1117px 2270px;
   background-repeat: no-repeat;
-  width: calc(100vw + 250px);
-  height: 2270px;
+  width: 100vw;
+  height: 2275px;
   position: absolute;
-  margin-top: -150px;
-  margin-left: -250px;
-  padding-left: 250px;
+  margin-top: -135px;
+  margin-left: 0;
+}
+
+.specialists h2 {
+  line-height: 70px;
 }
 
 .specialists .cards {
@@ -762,6 +779,7 @@ footer {
 }
 
 .calendar {
+  top: 1700px;
   height: 440px;
   text-align: center;
   padding-top: 90px;
@@ -796,15 +814,19 @@ footer {
   width: 47px;
   height: 37px;
   position: absolute;
-  left: 16px;
-  bottom: 50px;
+  left: 50px;
+  bottom: 62px;
 }
 
 .send-message {
   background-color: #89c069;
-  padding: 60px 16px 16px;
+  padding: 140px 16px 16px;
   height: 1010px;
   text-align: center;
+}
+
+.send-message h2 {
+  line-height: 125px;
 }
 
 .send-message .boat {
@@ -872,6 +894,14 @@ footer {
   .about .about-description {
     padding-top: 150px;
   }
+  .calendar .shamrock {
+    left: 25%;
+    bottom: 25%;
+  }
+  .calendar .blinking-star {
+    right: 25%;
+    top: 40%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -915,9 +945,6 @@ footer {
   }
   .main-description .texts {
     left: 200px;
-  }
-  .specialists {
-    margin-top: -200px;
   }
   .gallery {
     height: 1000px;
@@ -987,19 +1014,29 @@ footer {
     display: none;
   }
   .specialists {
-    height: 2103px;
+    height: 2240px;
     margin-top: -210px;
     background-image: url("../img/spec-bgr.svg");
-    margin-left: -150px;
     padding-left: 0;
+    background-position: center;
+    background-size: 2090px 2900px;
+    background-repeat: no-repeat;
   }
 }
 
-.calendar {
-  top: 1500px;
-}
-
 @media screen and (min-width: 1440px) {
+  h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .specialists-consultation {
+    background-color: #89c069;
+    height: 1920px;
+  }
+  .specialists-consultation .specialists {
+    margin-top: -350px;
+    padding-top: 400px;
+  }
   .specialists .cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1009,10 +1046,9 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .specialists-consultation {
-    width: calc(100vw + 10rem);
-    background-color: #89c069;
-    height: 1920px;
+  .help .help-header {
+    font-size: 70px;
+    line-height: 70px;
   }
   .submit-form {
     width: 325px;
@@ -1046,9 +1082,7 @@ footer {
     position: relative;
   }
   .send-message h2 {
-    font-size: 70px;
     line-height: 125px;
-    font-family: "Avenir next";
   }
   .send-message .boat {
     position: absolute;
@@ -1123,6 +1157,12 @@ footer {
     line-height: 34px;
     margin: 0 15px;
     font-size: 25px;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .navigation .link:hover {
+    cursor: pointer;
+    color: #e081af;
   }
   .navigation .sub-menu:first-of-type {
     margin-top: 0;
@@ -1189,8 +1229,6 @@ footer {
     padding: 16px 150px 16px 200px;
   }
   .help h2 {
-    font-size: 70px;
-    line-height: 70px;
     margin: auto;
     margin-bottom: 35px;
   }
@@ -1215,14 +1253,13 @@ footer {
     height: 900px;
   }
   .about h2 {
-    font-size: 70px;
-    line-height: 70px;
     padding-top: 200px;
   }
   .about .about-description {
     top: 0;
     height: 1020px;
     margin-bottom: -160px;
+    margin-top: 55px;
   }
   .about .about-description p {
     font-size: 30px;
@@ -1247,16 +1284,27 @@ footer {
     right: -210px;
     display: block;
   }
-  .specialists h2 {
-    font-size: 70px;
-    line-height: 70px;
-    font-family: "Avenir next";
-  }
   .footer {
     padding: 100px 145px 50px 200px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .specialists .cards .card {
+    width: 502px;
+    height: 655px;
+  }
+  .specialists .cards .specialist-picture {
+    width: 502px;
+    height: auto;
+  }
+  .specialists .cards span {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .specialists h3 {
+    font-size: 40px;
+    line-height: 55px;
   }
   .calendar .sign-for-consultation {
     font-size: 100px;

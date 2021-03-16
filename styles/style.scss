@@ -17,6 +17,17 @@ footer {
   width: 100vw;
 }
 
+button,
+.submit-form {
+  outline: none;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: "Avenir next";
+}
+
 // fonts
 @font-face {
   font-family: "Avenir";
@@ -199,6 +210,7 @@ footer {
 
 .description-text {
   background-image: url("../img/Path231.svg");
+  background-size: 940px 750px;
   height: 750px;
   width: 940px;
   position: absolute;
@@ -229,9 +241,7 @@ footer {
   h2 {
     margin-bottom: 50px;
     margin-left: 16px;
-    font-size: 35px;
     line-height: 70px;
-    font-family: "Avenir next";
     text-align: center;
   }
 
@@ -273,7 +283,7 @@ footer {
   background-color: #fff8eb;
   display: grid;
   grid-template-columns: 1fr;
-  height: 1000px;
+  height: 1400px;
 
   .column-1 {
     width: 100%;
@@ -313,6 +323,11 @@ footer {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .picture.lazy {
+    background-image: none;
+    background-color: $green;
   }
 
   .picture-1 {
@@ -466,9 +481,7 @@ footer {
     text-align: left;
   }
   .help-header {
-    font-size: 35px;
     line-height: 45px;
-    font-family: "Avenir next";
     margin: 0 27px;
   }
 
@@ -577,18 +590,22 @@ footer {
   width: 100vw;
   background-color: $green;
 }
+// dobre dla mobilki
 .specialists {
   background-image: url("../img/Path151.svg");
+  background-position-x: center;
   text-align: center;
-  padding-top: 300px;
-  background-size: cover;
+  padding-top: 180px;
+  background-size: 1117px 2270px;
   background-repeat: no-repeat;
-  width: calc(100vw + 250px);
-  height: 2270px;
+  width: 100vw;
+  height: 2275px;
   position: absolute;
-  margin-top: -150px;
-  margin-left: -250px;
-  padding-left: 250px;
+  margin-top: -135px;
+  margin-left: 0;
+  h2 {
+    line-height: 70px;
+  }
 
   .cards {
     margin-top: 100px;
@@ -636,9 +653,9 @@ footer {
     line-height: 35px;
   }
 }
-
 // calendar
 .calendar {
+  top: 1700px;
   height: 440px;
   text-align: center;
   padding-top: 90px;
@@ -672,8 +689,8 @@ footer {
     width: 47px;
     height: 37px;
     position: absolute;
-    left: 16px;
-    bottom: 50px;
+    left: 50px;
+    bottom: 62px;
   }
 }
 
@@ -681,10 +698,13 @@ footer {
 
 .send-message {
   background-color: $green;
-  padding: 60px 16px 16px;
+  padding: 140px 16px 16px;
   height: 1010px;
   text-align: center;
 
+  h2 {
+    line-height: 125px;
+  }
   .boat {
     width: 120px;
     height: 55px;
@@ -749,6 +769,17 @@ footer {
   .about .about-description {
     padding-top: 150px;
   }
+
+  .calendar {
+    .shamrock {
+      left: 25%;
+      bottom: 25%;
+    }
+    .blinking-star {
+      right: 25%;
+      top: 40%;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -798,10 +829,6 @@ footer {
     .texts {
       left: 200px;
     }
-  }
-
-  .specialists {
-    margin-top: -200px;
   }
 
   .gallery {
@@ -875,29 +902,39 @@ footer {
     display: none;
   }
   .specialists {
-    height: 2103px;
+    height: 2240px;
     margin-top: -210px;
     background-image: url("../img/spec-bgr.svg");
-    margin-left: -150px;
     padding-left: 0;
+    background-position: center;
+    background-size: 2090px 2900px;
+    background-repeat: no-repeat;
   }
 }
 
-.calendar {
-  top: 1500px;
-}
-
 @media screen and (min-width: 1440px) {
+  h2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  .specialists-consultation {
+    background-color: $green;
+    height: 1920px;
+    .specialists {
+      margin-top: -350px;
+      padding-top: 400px;
+    }
+  }
   .specialists .cards {
     flex-direction: row;
     justify-content: center;
   }
-  .specialists-consultation {
-    width: calc(100vw + 10rem);
-    background-color: $green;
-    height: 1920px;
-  }
 
+  .help .help-header {
+    font-size: 70px;
+    line-height: 70px;
+  }
   .submit-form {
     width: 325px;
     height: 80px;
@@ -922,9 +959,7 @@ footer {
     position: relative;
 
     h2 {
-      font-size: 70px;
       line-height: 125px;
-      font-family: "Avenir next";
     }
     .boat {
       position: absolute;
@@ -997,6 +1032,12 @@ footer {
     line-height: 34px;
     margin: 0 15px;
     font-size: 25px;
+    transition: color 0.3s ease;
+  }
+
+  .navigation .link:hover {
+    cursor: pointer;
+    color: $dark-pink;
   }
   .navigation .sub-menu:first-of-type {
     margin-top: 0;
@@ -1065,8 +1106,6 @@ footer {
     padding: 16px 150px 16px 200px;
 
     h2 {
-      font-size: 70px;
-      line-height: 70px;
       margin: auto;
       margin-bottom: 35px;
     }
@@ -1099,8 +1138,6 @@ footer {
 
   .about {
     h2 {
-      font-size: 70px;
-      line-height: 70px;
       padding-top: 200px;
     }
 
@@ -1108,6 +1145,7 @@ footer {
       top: 0;
       height: 1020px;
       margin-bottom: -160px;
+      margin-top: 55px;
       p {
         font-size: 30px;
       }
@@ -1138,16 +1176,31 @@ footer {
     }
   }
 
-  .specialists {
-    h2 {
-      font-size: 70px;
-      line-height: 70px;
-      font-family: "Avenir next";
-    }
-  }
   .footer {
     padding: 100px 145px 50px 200px;
     justify-content: space-between;
+  }
+
+  .specialists {
+    .cards {
+      .card {
+        width: 502px;
+        height: 655px;
+      }
+      .specialist-picture {
+        width: 502px;
+        height: auto;
+      }
+      span {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+
+    h3 {
+      font-size: 40px;
+      line-height: 55px;
+    }
   }
 
   .calendar {
