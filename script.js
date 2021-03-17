@@ -12,8 +12,8 @@ const background = document.querySelector('.blur-background')
 const joinTrialClasses = document.querySelectorAll('.join-trial-classes')
 const popupImage = document.querySelector('.popup-image')
 const expandableList = document.querySelector('.expandable-list')
-const subLiks = document.querySelectorAll('.sub-menu-link')
-const subMenu = document.querySelector('.sub-menu')
+// const subLiks = document.querySelectorAll('.sub-menu-link')
+// const subMenu = document.querySelector('.sub-menu')
 //toggle menu visibility
 menuButton.addEventListener('click', () => {
   menu.classList.add('menu-visible')
@@ -33,15 +33,15 @@ menuLinks.forEach(link => link.addEventListener('click', () => {
   expandableList.style.transform = "rotate(180deg)"
 }))
 
-subMenu.addEventListener('click', (e) => {
-  e.preventDefault()
-})
-expandableList.addEventListener('click', (e) => {
-  console.log(e.target)
-  subLiks.forEach(link => link.style.display = "block")
-  expandableList.style.transform = "rotate(180deg)"
+// subMenu.addEventListener('click', (e) => {
+//   e.preventDefault()
+// })
+// expandableList.addEventListener('click', (e) => {
+//   console.log(e.target)
+//   subLiks.forEach(link => link.style.display = "block")
+//   expandableList.style.transform = "rotate(180deg)"
 
-})
+// })
 
 // toggle services display
 options.forEach(link => link.addEventListener('click', (e) => {

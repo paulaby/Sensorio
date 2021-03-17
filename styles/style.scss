@@ -5,9 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
+// html {
+//   width: 100vw;
+// }
+html,
+body {
   scroll-behavior: smooth;
-  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 main,
@@ -414,7 +419,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 45px;
   }
 
   .media-links {
@@ -433,16 +437,18 @@ h2 {
     display: flex;
     flex-direction: column;
     align-self: center;
-    margin-top: 60px;
     padding: 0 45px;
+    width: 329px;
     ul {
       list-style: none;
     }
   }
 
   h3 {
+    font-family: "Avenir Next";
     font-weight: bold;
     font-size: 30px;
+    margin-bottom: 20px;
   }
   .working-list {
     margin-bottom: 65px;
@@ -460,6 +466,7 @@ h2 {
     margin: 0 16px;
     font-size: 25px;
     line-height: 35px;
+    align-self: flex-start;
     .footer-header {
       margin-left: 29px;
       margin-bottom: 30px;
@@ -468,6 +475,22 @@ h2 {
   .contact-icon {
     width: 22px;
     height: 18px;
+  }
+
+  .footer-icon {
+    margin-right: 16px;
+  }
+
+  .address,
+  .email,
+  .telephone {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .address {
+    width: 320px;
   }
 }
 
@@ -843,15 +866,6 @@ h2 {
     grid-template-rows: 1fr;
     grid-template-areas: "pop-image pop-desc";
   }
-
-  .footer {
-    .media,
-    .footer-working-hours,
-    .contact {
-      width: 50%;
-      margin: 60px auto;
-    }
-  }
   .info-about-services {
     justify-content: center;
   }
@@ -998,7 +1012,7 @@ h2 {
     grid-template-areas: "hours media contact";
     height: auto;
     place-items: center;
-    padding: 70px 100px;
+    padding: 120px 100px;
     .footer-working-hours,
     .media,
     .contact {
@@ -1103,7 +1117,7 @@ h2 {
     height: 75px;
   }
   .help {
-    padding: 16px 150px 16px 200px;
+    padding: 16px 100px 16px 200px;
 
     h2 {
       margin: auto;
@@ -1177,7 +1191,7 @@ h2 {
   }
 
   .footer {
-    padding: 100px 145px 50px 200px;
+    padding: 120px 145px 50px 200px;
     justify-content: space-between;
   }
 
@@ -1189,7 +1203,7 @@ h2 {
       }
       .specialist-picture {
         width: 502px;
-        height: auto;
+        height: 324px;
       }
       span {
         font-size: 25px;
@@ -1315,6 +1329,10 @@ h2 {
   .next-btn {
     width: 50px;
     height: 50px;
+  }
+
+  .footer {
+    justify-items: center;
   }
 }
 
