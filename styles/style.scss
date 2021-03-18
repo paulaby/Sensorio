@@ -606,10 +606,13 @@ h2 {
 }
 
 //card - specialists
-
+.cards .column {
+  display: flex;
+  flex-direction: column;
+}
 .specialists-consultation {
   position: relative;
-  height: 2000px;
+  height: 2750px;
   width: 100vw;
   background-color: $green;
 }
@@ -618,20 +621,20 @@ h2 {
   background-image: url("../img/Path151.svg");
   background-position-x: center;
   text-align: center;
-  padding-top: 180px;
-  background-size: 1117px 2270px;
+  padding-top: 140px;
+  background-size: 1380px 2830px;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 2275px;
+  height: 2830px;
   position: absolute;
-  margin-top: -135px;
+  margin-top: -150px;
   margin-left: 0;
   h2 {
     line-height: 70px;
   }
 
   .cards {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -678,10 +681,10 @@ h2 {
 }
 // calendar
 .calendar {
-  top: 1700px;
+  top: 2265px;
   height: 440px;
   text-align: center;
-  padding-top: 90px;
+  padding-top: 80px;
   position: relative;
 
   .sign-for-consultation {
@@ -721,7 +724,7 @@ h2 {
 
 .send-message {
   background-color: $green;
-  padding: 140px 16px 16px;
+  padding: 10px 16px 16px;
   height: 1010px;
   text-align: center;
 
@@ -915,14 +918,18 @@ h2 {
   .mobile-media {
     display: none;
   }
-  .specialists {
-    height: 2240px;
-    margin-top: -210px;
-    background-image: url("../img/spec-bgr.svg");
-    padding-left: 0;
-    background-position: center;
-    background-size: 2090px 2900px;
-    background-repeat: no-repeat;
+  .specialists-consultation {
+    height: 2630px;
+    .specialists {
+      height: 2950px;
+      margin-top: -300px !important;
+      background-image: url("../img/spec-bgr.svg");
+      padding-left: 0;
+      background-position: center;
+      background-size: 2250px 2900px;
+      background-repeat: no-repeat;
+      padding-top: 220px;
+    }
   }
 }
 
@@ -934,15 +941,24 @@ h2 {
 
   .specialists-consultation {
     background-color: $green;
-    height: 1920px;
+    height: 2005px;
     .specialists {
       margin-top: -350px;
-      padding-top: 400px;
+      padding-top: 300px;
+      background-size: 1950px 2300px;
+      height: 2300px;
+
+      .cards {
+        justify-content: center;
+
+        .column {
+          flex-direction: row;
+        }
+      }
     }
-  }
-  .specialists .cards {
-    flex-direction: row;
-    justify-content: center;
+    .calendar {
+      top: 1500px;
+    }
   }
 
   .help .help-header {
@@ -1033,10 +1049,6 @@ h2 {
 
   .gallery {
     height: 1440px;
-  }
-
-  .calendar {
-    top: 1100px;
   }
 
   .navigation .link,
@@ -1158,7 +1170,7 @@ h2 {
     .about-description {
       top: 0;
       height: 1020px;
-      margin-bottom: -160px;
+      margin-bottom: -210px;
       margin-top: 55px;
       p {
         font-size: 30px;
@@ -1184,8 +1196,8 @@ h2 {
   #ask-for-consultation {
     .second-boy {
       position: absolute;
-      top: -300px;
-      right: -210px;
+      right: -233px;
+      top: -353px;
       display: block;
     }
   }
@@ -1195,53 +1207,59 @@ h2 {
     justify-content: space-between;
   }
 
-  .specialists {
-    .cards {
-      .card {
-        width: 502px;
-        height: 655px;
+  .specialists-consultation {
+    height: 2450px;
+    .specialists {
+      padding-top: 300px;
+      background-size: 2217px 2732px;
+      height: 2730px;
+      .cards {
+        .card {
+          width: 502px;
+          height: 655px;
+        }
+        .specialist-picture {
+          width: 502px;
+          height: 324px;
+        }
+        span {
+          font-size: 25px;
+          line-height: 35px;
+        }
       }
-      .specialist-picture {
-        width: 502px;
-        height: 324px;
-      }
-      span {
-        font-size: 25px;
-        line-height: 35px;
+
+      h3 {
+        font-size: 40px;
+        line-height: 55px;
       }
     }
+    .calendar {
+      top: 1750px;
+      .sign-for-consultation {
+        font-size: 100px;
+        line-height: 125px;
+      }
 
-    h3 {
-      font-size: 40px;
-      line-height: 55px;
-    }
-  }
-
-  .calendar {
-    .sign-for-consultation {
-      font-size: 100px;
-      line-height: 125px;
-    }
-
-    button {
-      width: 655px;
-      height: 130px;
-      margin-top: 80px;
-      font-size: 35px;
-      line-height: 48px;
-    }
-    .blinking-star {
-      top: 270px;
-      right: 500px;
-      width: 62px;
-      height: 62px;
-    }
-    .shamrock {
-      width: 93px;
-      height: 75px;
-      position: absolute;
-      left: 25%;
-      bottom: 0;
+      button {
+        width: 655px;
+        height: 130px;
+        margin-top: 80px;
+        font-size: 35px;
+        line-height: 48px;
+      }
+      .blinking-star {
+        top: 270px;
+        right: 500px;
+        width: 62px;
+        height: 62px;
+      }
+      .shamrock {
+        width: 93px;
+        height: 75px;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+      }
     }
   }
 
@@ -1333,6 +1351,10 @@ h2 {
 
   .footer {
     justify-items: center;
+  }
+
+  .specialists {
+    margin-top: -175px;
   }
 }
 

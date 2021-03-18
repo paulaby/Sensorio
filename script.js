@@ -50,7 +50,6 @@ options.forEach(link => link.addEventListener('click', (e) => {
   }
   const id = e.target.id - 1
   // move to another func
-  console.log(e.target.id)
   popupImage.style.backgroundImage = `url('./img/photos/${services[id].photo}')`
   popHeader.textContent = services[id].name
   popupPrice.textContent = services[id].price
@@ -376,8 +375,6 @@ pictures.forEach(function (picture, index) {
     imageBox.style.display = "block"
     currentImageId = index + 1
 
-
-    console.log(currentImageId)
     currentImageDisplay(currentImageId)
   })
 })
@@ -386,9 +383,6 @@ function currentImageDisplay(pictureId) {
   imageBox.style.backgroundSize = "cover"
   imageBox.style.background = `url("./img/photos/Zdjecie${pictureId}.jpg") center/cover no-repeat`
   imageBox.classList.add(`display${pictureId}`)
-  if (imageBox.classList.contains('display3')) {
-    console.log(currentImageId)
-  }
 }
 
 prevBtn.addEventListener('click', () => {
