@@ -52,16 +52,16 @@ h2 {
   width: 100%;
   height: 90px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   background-color: $green;
   color: $light;
   font-family: "Avenir next";
-}
 
-.header-logo {
-  width: 207px;
-  height: 36px;
+  .header-logo {
+    width: 207px;
+    height: 36px;
+    margin: 0 auto;
+  }
 }
 
 .menu-hamburger {
@@ -167,6 +167,7 @@ h2 {
     h1 {
       font-size: 50px;
       line-height: 57px;
+      width: 330px;
     }
 
     img {
@@ -215,12 +216,12 @@ h2 {
 
 .description-text {
   background-image: url("../img/Path231.svg");
-  background-size: 940px 750px;
+  background-size: 1058px 809px;
   height: 750px;
   width: 940px;
   position: absolute;
   top: 45px;
-  left: -200px;
+  left: -222px;
 }
 .boy-smile,
 .boy-hands {
@@ -228,16 +229,16 @@ h2 {
 }
 
 .boy-smile {
-  top: 30px;
-  left: 48px;
-  transform: rotate(-5deg);
+  top: 25px;
+  left: 33px;
 }
 .boy-hands {
-  top: 185px;
-  left: 85px;
+  top: 180px;
+  left: 55px;
   z-index: 1;
-  width: 140px;
-  transform: rotate(-4deg);
+  width: 150px;
+  height: 32px;
+  transform: rotate(-2deg);
 }
 
 // about sensorio
@@ -1149,10 +1150,6 @@ h2 {
         font-size: 35px;
         line-height: 48px;
         padding: 35px;
-        &:nth-of-type(7),
-        &:last-of-type {
-          margin-right: 0;
-        }
       }
     }
   }
