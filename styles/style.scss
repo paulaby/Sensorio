@@ -5,9 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-// html {
-//   width: 100vw;
-// }
+
 html,
 body {
   scroll-behavior: smooth;
@@ -118,7 +116,7 @@ h2 {
   height: 100vh;
   z-index: 10;
   flex-direction: column;
-  // justify-content: space-between;
+
   .close-icon {
     display: block;
     width: 20px;
@@ -617,7 +615,6 @@ h2 {
   width: 100vw;
   background-color: $green;
 }
-// dobre dla mobilki
 .specialists {
   background-image: url("../img/Path151.svg");
   background-position-x: center;
@@ -790,7 +787,6 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .description-text {
-    // background-image: url("../img/Path\ 47.svg");
     width: 1000px;
   }
   .about .about-description {
