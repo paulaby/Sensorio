@@ -99,7 +99,7 @@ joinTrialClasses.forEach(button => button.addEventListener('click', () => {
 }))
 
 
-// lazy load images
+// lazy loading
 document.addEventListener("DOMContentLoaded", function () {
   var lazyloadImages;
   if ("IntersectionObserver" in window) {
@@ -147,14 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("orientationChange", lazyload);
   }
 })
-
-
-
-
-
-
-
-
 
 // pictures carousel
 
@@ -315,15 +307,15 @@ const services = [
     Podczas zajęć pedagogicznych, wspieramy dziecko we wszystkich sferach jego rozwoju stymulując rozwój poznawczy, emocjonalny i społeczny. Każda aktywność dobierana jest indywidualnie w zależności od potrzeb dziecka tak, by jednocześnie edukowała oraz dawała radość i zabawę. Bawiąc się z dziećmi szczególną uwagę zwracamy na usprawnianie funkcji słuchowych, wzrokowych, ruchowych i ich właściwej koordynacji. Stymulujemy i wspieramy rozwój potrzeb i oczekiwań dzieci związanych z poznawaniem świata, potrzebą aktywności.
 
     Zadaniem pedagoga jest:
-    + pogłębianie oraz uzupełnianie działań dydaktyczno-wychowawczych prowadzonych przez wychowawców w placówce,
-    + rozpoznawanie indywidualnych potrzeb dzieci,
-    + prowadzenie działań diagnostycznych, określanie form i sposobów udzielania dzieciom pomocy pedagogicznej,
-    + połączenie działań służących wspomaganiu rozwoju dzieci z deficytami rozwojowymi.
+   <br> + pogłębianie oraz uzupełnianie działań dydaktyczno-wychowawczych prowadzonych przez wychowawców w placówce,
+   <br> + rozpoznawanie indywidualnych potrzeb dzieci,
+   <br> + prowadzenie działań diagnostycznych, określanie form i sposobów udzielania dzieciom pomocy pedagogicznej,
+   <br> + połączenie działań służących wspomaganiu rozwoju dzieci z deficytami rozwojowymi.
     
-    Cele terapii pedagogicznej:
-    + stymulowanie rozwoju dziecka - jest to cel nadrzędny,
-    + wyrównywanie braków w umiejętnościach,
-    + eliminowanie niepowodzeń emocjonalno-społecznych i ich konsekwencji.
+   <br> Cele terapii pedagogicznej:
+   <br> + stymulowanie rozwoju dziecka - jest to cel nadrzędny,
+   <br> + wyrównywanie braków w umiejętnościach,
+   <br> + eliminowanie niepowodzeń emocjonalno-społecznych i ich konsekwencji.
 
         `,
   },

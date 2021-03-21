@@ -65,7 +65,7 @@ h2 {
   margin: 0 auto;
 }
 
-.menu-hamburger {
+.header .menu-hamburger {
   display: block;
   position: absolute;
   width: 27px;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .navigation .link,
-.sub-menu {
+.navigation .sub-menu {
   text-decoration: none;
   color: #89c069;
   font-size: 30px;
@@ -148,16 +148,6 @@ h2 {
 
 .menu-visible.navigation .nav-menu {
   display: block;
-}
-
-.mobile-logo {
-  display: block;
-  width: 146px;
-  height: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-top: 32px;
 }
 
 .main-description,
@@ -695,8 +685,14 @@ h2 {
   background-color: #fff8eb;
 }
 
-.popup .content {
-  width: 100%;
+.popup .popup-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "pop-desc" "pop-image";
 }
 
 .popup .popup-description {
@@ -1034,9 +1030,6 @@ h2 {
     top: 332px;
     left: 650px;
   }
-  .main-description .texts {
-    left: 200px;
-  }
   .gallery {
     height: 1000px;
     -ms-grid-columns: 1fr 1fr;
@@ -1082,10 +1075,17 @@ h2 {
   }
   .header {
     padding-left: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header .header-logo {
     width: 295px;
     height: 50px;
+    margin: 0;
+  }
+  .header .menu-hamburger {
+    display: none;
   }
   .navigation {
     display: block;
@@ -1110,9 +1110,6 @@ h2 {
     background-size: 2250px 2900px;
     background-repeat: no-repeat;
     padding-top: 220px;
-  }
-  .menu-hamburger {
-    display: none;
   }
   .navigation .link {
     color: #fff8eb;
@@ -1282,9 +1279,6 @@ h2 {
   .gallery {
     height: 1440px;
   }
-  .menu-hamburger {
-    display: none;
-  }
   .navigation .link,
   .sub-menu {
     color: #fff8eb;
@@ -1305,6 +1299,10 @@ h2 {
   img.logo-hand {
     width: 227px;
     height: 320px;
+  }
+  .popup.visible {
+    min-height: 80vh;
+    height: auto;
   }
   .popup.visible .popup-heading {
     font-size: 70px;
@@ -1353,6 +1351,12 @@ h2 {
 }
 
 @media screen and (min-width: 1920px) {
+  .header .navigation {
+    margin-right: 200px;
+  }
+  .header .header-logo {
+    margin-left: 170px;
+  }
   .main-description .boy-smile {
     top: 400px;
     right: 10%;
@@ -1395,7 +1399,7 @@ h2 {
   }
   .popup.visible {
     width: 1392px;
-    height: 900px;
+    height: 1011px;
   }
   .about h2 {
     padding-top: 200px;
@@ -1492,6 +1496,14 @@ h2 {
   }
 }
 
+.service-description {
+  font-size: 25px;
+}
+
+.popup.visible .popup-price {
+  font-family: "Avenir Next";
+}
+
 .image-view {
   position: fixed;
   top: 0%;
@@ -1578,15 +1590,5 @@ h2 {
   .specialists {
     margin-top: -175px;
   }
-}
-
-.popup-content {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "pop-desc" "pop-image";
 }
 /*# sourceMappingURL=style.css.map */

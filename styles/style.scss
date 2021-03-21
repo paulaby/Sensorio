@@ -60,32 +60,32 @@ h2 {
     height: 36px;
     margin: 0 auto;
   }
-}
 
-.menu-hamburger {
-  display: block;
-  position: absolute;
-  width: 27px;
-  height: 18px;
-  right: 30px;
-  cursor: pointer;
+  .menu-hamburger {
+    display: block;
+    position: absolute;
+    width: 27px;
+    height: 18px;
+    right: 30px;
+    cursor: pointer;
+  }
 }
 
 .navigation {
   display: none;
   transition: all 0.5s ease-in-out;
-}
 
-.navigation .link,
-.sub-menu {
-  text-decoration: none;
-  color: $green;
-  font-size: 30px;
-  line-height: 70px;
-  margin: 0 45px;
-}
-.navigation .with-sub-menu {
-  margin-top: 70px;
+  .link,
+  .sub-menu {
+    text-decoration: none;
+    color: $green;
+    font-size: 30px;
+    line-height: 70px;
+    margin: 0 45px;
+  }
+  .with-sub-menu {
+    margin-top: 70px;
+  }
 }
 
 .mobile-media {
@@ -134,20 +134,13 @@ h2 {
   }
 }
 
-.mobile-logo {
-  display: block;
-  width: 146px;
-  height: auto;
-  align-self: center;
-  margin-top: 32px;
-}
-
-// short description
 .main-description,
 .help,
 .about {
   background-color: $green;
 }
+
+// short description
 .main-description {
   height: 820px;
   position: relative;
@@ -578,9 +571,13 @@ h2 {
     z-index: 10;
     background-color: $light;
   }
-  .content {
-    width: 100%;
+  .popup-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pop-desc" "pop-image";
   }
+
   .popup-description {
     padding: 1rem;
     text-align: left;
@@ -749,7 +746,6 @@ h2 {
 }
 
 // consultation
-
 .send-message {
   background-color: $green;
   padding: 10px 16px 16px;
@@ -814,7 +810,6 @@ h2 {
 }
 
 // media
-
 @media screen and (min-width: 768px) {
   .main-description {
     height: 935px;
@@ -823,7 +818,6 @@ h2 {
       height: 940px;
       width: 1360px;
       top: 0px;
-      // left: -330px;
     }
 
     .boy-smile {
@@ -900,9 +894,6 @@ h2 {
       top: 332px;
       left: 650px;
     }
-    .texts {
-      left: 200px;
-    }
   }
 
   .gallery {
@@ -945,11 +936,17 @@ h2 {
       top: auto;
     }
   }
+
   .header {
     padding-left: 30px;
+    justify-content: space-between;
     .header-logo {
       width: 295px;
       height: 50px;
+      margin: 0;
+    }
+    .menu-hamburger {
+      display: none;
     }
   }
 
@@ -978,10 +975,6 @@ h2 {
       background-repeat: no-repeat;
       padding-top: 220px;
     }
-  }
-
-  .menu-hamburger {
-    display: none;
   }
 
   .navigation .link {
@@ -1140,10 +1133,6 @@ h2 {
     height: 1440px;
   }
 
-  .menu-hamburger {
-    display: none;
-  }
-
   .navigation .link,
   .sub-menu {
     color: #fff8eb;
@@ -1168,6 +1157,8 @@ h2 {
   }
 
   .popup.visible {
+    min-height: 80vh;
+    height: auto;
     .popup-heading {
       font-size: 70px;
       line-height: 70px;
@@ -1215,6 +1206,14 @@ h2 {
 }
 
 @media screen and (min-width: 1920px) {
+  .header {
+    .navigation {
+      margin-right: 200px;
+    }
+    .header-logo {
+      margin-left: 170px;
+    }
+  }
   .main-description .boy-smile {
     top: 400px;
     right: 10%;
@@ -1261,7 +1260,7 @@ h2 {
 
   .popup.visible {
     width: 1392px;
-    height: 900px;
+    height: 1011px;
   }
 
   .about {
@@ -1371,6 +1370,14 @@ h2 {
   }
 }
 
+.service-description {
+  font-size: 25px;
+}
+
+.popup.visible .popup-price {
+  font-family: "Avenir Next";
+}
+
 // gallery
 .image-view {
   position: fixed;
@@ -1459,11 +1466,4 @@ h2 {
   .specialists {
     margin-top: -175px;
   }
-}
-
-.popup-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "pop-desc" "pop-image";
 }
