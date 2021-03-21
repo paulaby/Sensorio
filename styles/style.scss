@@ -190,8 +190,12 @@ h2 {
       font-size: 14px;
       line-height: 19px;
       font-family: "Avenir next";
-
       margin-top: 40px;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.9;
+      }
     }
   }
 }
@@ -551,6 +555,7 @@ h2 {
   font-family: "Avenir next";
   margin-bottom: 30px;
   margin-right: 15px;
+  transition: background-color 0.3s ease;
   &:hover {
     background-color: $dark-pink;
     cursor: pointer;
@@ -567,7 +572,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 33px;
     width: 90%;
     height: 80vh;
     z-index: 10;
@@ -597,7 +602,7 @@ h2 {
     height: 100%;
     background-size: cover;
     background-position-y: center;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 0 33px 33px;
     grid-area: pop-image;
     background-repeat: no-repeat;
   }
@@ -852,9 +857,6 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-menu {
-    display: none;
-  }
   .main-description {
     height: 1280px;
 
@@ -976,6 +978,38 @@ h2 {
       background-repeat: no-repeat;
       padding-top: 220px;
     }
+  }
+
+  .menu-hamburger {
+    display: none;
+  }
+
+  .navigation .link {
+    color: #fff8eb;
+    display: inline-block;
+    line-height: 34px;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  .nav-menu .with-sub-menu {
+    margin-top: 0;
+  }
+
+  .sub-menu {
+    display: none;
+  }
+
+  .navigation .link:hover {
+    cursor: pointer;
+    color: $dark-pink;
+  }
+  .navigation .sub-menu:first-of-type {
+    margin-top: 0;
+  }
+
+  .nav-menu {
+    display: flex;
   }
 }
 
@@ -1102,12 +1136,12 @@ h2 {
     }
   }
 
-  .menu-hamburger {
-    display: none;
-  }
-
   .gallery {
     height: 1440px;
+  }
+
+  .menu-hamburger {
+    display: none;
   }
 
   .navigation .link,
@@ -1156,7 +1190,7 @@ h2 {
       height: 100%;
       background-size: cover;
       background-position-x: -100px;
-      border-radius: 15px;
+      border-radius: 33px;
       grid-area: pop-image;
       background-repeat: no-repeat;
     }
@@ -1164,6 +1198,19 @@ h2 {
 
   .help {
     padding: 0 200px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .specialists-consultation {
+    height: 2450px;
+    .specialists {
+      padding-top: 300px;
+      background-size: 2217px 2600px;
+      height: 2730px;
+      background-position-x: -250px;
+      margin-top: -370px !important;
+    }
   }
 }
 
@@ -1268,6 +1315,7 @@ h2 {
       padding-top: 300px;
       background-size: 2217px 2732px;
       height: 2730px;
+      background-position: center;
       .cards {
         .card {
           width: 502px;

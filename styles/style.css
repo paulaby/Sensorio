@@ -211,6 +211,12 @@ h2 {
   line-height: 19px;
   font-family: "Avenir next";
   margin-top: 40px;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.main-description .texts button:hover {
+  opacity: 0.9;
 }
 
 .nav-menu {
@@ -659,6 +665,8 @@ h2 {
   font-family: "Avenir next";
   margin-bottom: 30px;
   margin-right: 15px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .services-button:hover {
@@ -680,7 +688,7 @@ h2 {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: 2px solid black;
-  border-radius: 15px;
+  border-radius: 33px;
   width: 90%;
   height: 80vh;
   z-index: 10;
@@ -715,7 +723,7 @@ h2 {
   height: 100%;
   background-size: cover;
   background-position-y: center;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 33px 33px;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pop-image;
@@ -987,9 +995,6 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-menu {
-    display: none;
-  }
   .main-description {
     height: 1280px;
   }
@@ -1105,6 +1110,36 @@ h2 {
     background-size: 2250px 2900px;
     background-repeat: no-repeat;
     padding-top: 220px;
+  }
+  .menu-hamburger {
+    display: none;
+  }
+  .navigation .link {
+    color: #fff8eb;
+    display: inline-block;
+    line-height: 34px;
+    margin: 0 15px;
+    font-size: 16px;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .nav-menu .with-sub-menu {
+    margin-top: 0;
+  }
+  .sub-menu {
+    display: none;
+  }
+  .navigation .link:hover {
+    cursor: pointer;
+    color: #e081af;
+  }
+  .navigation .sub-menu:first-of-type {
+    margin-top: 0;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1244,11 +1279,11 @@ h2 {
         -ms-grid-row-align: self-start;
         align-self: self-start;
   }
-  .menu-hamburger {
-    display: none;
-  }
   .gallery {
     height: 1440px;
+  }
+  .menu-hamburger {
+    display: none;
   }
   .navigation .link,
   .sub-menu {
@@ -1293,7 +1328,7 @@ h2 {
     height: 100%;
     background-size: cover;
     background-position-x: -100px;
-    border-radius: 15px;
+    border-radius: 33px;
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: pop-image;
@@ -1301,6 +1336,19 @@ h2 {
   }
   .help {
     padding: 0 200px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .specialists-consultation {
+    height: 2450px;
+  }
+  .specialists-consultation .specialists {
+    padding-top: 300px;
+    background-size: 2217px 2600px;
+    height: 2730px;
+    background-position-x: -250px;
+    margin-top: -370px !important;
   }
 }
 
@@ -1394,6 +1442,7 @@ h2 {
     padding-top: 300px;
     background-size: 2217px 2732px;
     height: 2730px;
+    background-position: center;
   }
   .specialists-consultation .specialists .cards .card {
     width: 502px;
