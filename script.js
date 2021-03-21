@@ -1,6 +1,6 @@
 const menuButton = document.querySelector('.menu-hamburger')
 const menu = document.querySelector('.navigation')
-const closeMenu = document.querySelector('.close-icon')
+const closeIcon = document.querySelector('.close-icon')
 const closeServices = document.querySelector('.close-services')
 const menuLinks = document.querySelectorAll('.link')
 const options = document.querySelectorAll('.single-tile')
@@ -11,37 +11,60 @@ const serviceDescription = document.querySelector('.service-description')
 const background = document.querySelector('.blur-background')
 const joinTrialClasses = document.querySelectorAll('.join-trial-classes')
 const popupImage = document.querySelector('.popup-image')
-const expandableList = document.querySelector('.expandable-list')
-// const subLiks = document.querySelectorAll('.sub-menu-link')
-// const subMenu = document.querySelector('.sub-menu')
+const expandableList = document.querySelector('.menu-chevron')
+const subLinks = document.querySelectorAll('.sub-menu-link')
+const subMenuList = document.querySelector('.sub-menu')
+const subMenu = document.querySelector('.expand-link')
 //toggle menu visibility
 menuButton.addEventListener('click', () => {
   menu.classList.add('menu-visible')
+  expandableList.style.display = "inline-block"
 
 })
-// toggle zamiast tego???
-closeMenu.addEventListener('click', () => {
+closeIcon.addEventListener('click', () => {
   menu.classList.remove('menu-visible')
   expandableList.style.display = "none"
   expandableList.style.transform = "rotate(180deg)"
-
+  closeMenu()
 
 })
-menuLinks.forEach(link => link.addEventListener('click', () => {
+
+function closeMenu() {
   menu.classList.remove('menu-visible')
+  expandableList.style.transform = "unset"
   expandableList.style.display = "none"
-  expandableList.style.transform = "rotate(180deg)"
+  expandableList.classList.remove('rotated')
+  subLinks.forEach(link => {
+    link.classList.remove('visible')
+  })
+}
+
+menuLinks.forEach(link => link.addEventListener('click', (e) => {
+  if (menu.classList.contains('menu-visible') && e.target.classList.contains('expand-link')) {
+    e.preventDefault()
+    subLinks.forEach(link => {
+      link.classList.toggle('visible')
+    })
+    subMenuList.style.display = 'block'
+    expandableList.classList.toggle('rotated')
+
+    return
+  }
+  closeMenu()
+
 }))
 
-// subMenu.addEventListener('click', (e) => {
-//   e.preventDefault()
-// })
-// expandableList.addEventListener('click', (e) => {
-//   console.log(e.target)
-//   subLiks.forEach(link => link.style.display = "block")
-//   expandableList.style.transform = "rotate(180deg)"
+subLinks.forEach(link => {
+  link.addEventListener('click', () => {
 
-// })
+    subMenuList.style.display = 'none'
+
+    closeMenu()
+
+  })
+})
+
+
 
 // toggle services display
 options.forEach(link => link.addEventListener('click', (e) => {
@@ -133,6 +156,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// pictures carousel
+
+const pictures = document.querySelectorAll('.picture')
+const imageView = document.querySelector('.image-view')
+const imageBox = document.querySelector('.image-box')
+const nextBtn = document.querySelector('.next-btn')
+const prevBtn = document.querySelector('.prev-btn')
+
+
+let currentImageId = 0;
+
+imageView.addEventListener('click', function () {
+  this.style.display = "none"
+  imageBox.style.display = "none"
+})
+
+pictures.forEach(function (picture, index) {
+  picture.addEventListener('click', function () {
+    imageView.style.display = "block"
+    imageBox.style.display = "block"
+    currentImageId = index + 1
+
+    currentImageDisplay(currentImageId)
+  })
+})
+
+function currentImageDisplay(pictureId) {
+  imageBox.style.backgroundSize = "cover"
+  imageBox.style.background = `url("./img/photos/Zdjecie${pictureId}.jpg") center/cover no-repeat`
+  imageBox.classList.add(`display${pictureId}`)
+}
+
+prevBtn.addEventListener('click', () => {
+  currentImageId--
+  if (currentImageId === 0) {
+    currentImageId = pictures.length
+  }
+
+  currentImageDisplay(currentImageId)
+})
+nextBtn.addEventListener('click', () => {
+  currentImageId++
+  if (currentImageId > pictures.length) {
+    currentImageId = 1
+  }
+
+  currentImageDisplay(currentImageId)
+})
 
 
 const services = [
@@ -352,52 +423,3 @@ const services = [
         `,
   },
 ]
-
-// pictures carousel
-
-const pictures = document.querySelectorAll('.picture')
-const imageView = document.querySelector('.image-view')
-const imageBox = document.querySelector('.image-box')
-const nextBtn = document.querySelector('.next-btn')
-const prevBtn = document.querySelector('.prev-btn')
-
-
-let currentImageId = 0;
-
-imageView.addEventListener('click', function () {
-  this.style.display = "none"
-  imageBox.style.display = "none"
-})
-
-pictures.forEach(function (picture, index) {
-  picture.addEventListener('click', function () {
-    imageView.style.display = "block"
-    imageBox.style.display = "block"
-    currentImageId = index + 1
-
-    currentImageDisplay(currentImageId)
-  })
-})
-
-function currentImageDisplay(pictureId) {
-  imageBox.style.backgroundSize = "cover"
-  imageBox.style.background = `url("./img/photos/Zdjecie${pictureId}.jpg") center/cover no-repeat`
-  imageBox.classList.add(`display${pictureId}`)
-}
-
-prevBtn.addEventListener('click', () => {
-  currentImageId--
-  if (currentImageId === 0) {
-    currentImageId = pictures.length
-  }
-
-  currentImageDisplay(currentImageId)
-})
-nextBtn.addEventListener('click', () => {
-  currentImageId++
-  if (currentImageId > pictures.length) {
-    currentImageId = 1
-  }
-
-  currentImageDisplay(currentImageId)
-})

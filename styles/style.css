@@ -71,6 +71,7 @@ h2 {
   width: 27px;
   height: 18px;
   right: 30px;
+  cursor: pointer;
 }
 
 .navigation {
@@ -88,7 +89,7 @@ h2 {
   margin: 0 45px;
 }
 
-.navigation .sub-menu:first-of-type {
+.navigation .with-sub-menu {
   margin-top: 70px;
 }
 
@@ -142,6 +143,11 @@ h2 {
   top: 32px;
   right: 27px;
   color: black;
+  cursor: pointer;
+}
+
+.menu-visible.navigation .nav-menu {
+  display: block;
 }
 
 .mobile-logo {
@@ -207,32 +213,53 @@ h2 {
   margin-top: 40px;
 }
 
-.expandable-list {
-  display: none;
+.nav-menu {
+  list-style: none;
 }
 
-.expandable-list:hover {
+.menu-chevron {
+  display: none;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  vertical-align: middle;
+}
+
+.menu-chevron.rotated {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-chevron:hover {
   cursor: pointer;
 }
 
-.expandable-list.visible {
-  display: inline-block;
+.sub-menu .sub-menu-link {
+  display: none;
 }
 
-.sub-menu .sub-menu-link {
+.sub-menu .sub-menu-link.visible {
   list-style: none;
-  text-decoration: none;
   font-size: 22px;
   line-height: 50px;
   font-family: "Avenir";
-  display: none;
+  display: block;
+}
+
+.sub-menu .sub-menu-link.visible > a {
+  color: #89c069;
+  text-decoration: none;
+}
+
+.sub-menu .sub-menu-link.visible > a:hover {
+  text-decoration: underline;
 }
 
 .description-text {
   background-image: url("../img/Path231.svg");
   background-size: 1058px 809px;
+  background-repeat: no-repeat;
   height: 750px;
-  width: 940px;
+  width: 1058px;
   position: absolute;
   top: 45px;
   left: -222px;
@@ -699,6 +726,7 @@ h2 {
   position: absolute;
   top: 20px;
   right: 20px;
+  cursor: pointer;
 }
 
 .help-tiles {
@@ -925,8 +953,25 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .description-text {
-    width: 1000px;
+  .main-description {
+    height: 935px;
+  }
+  .main-description .description-text {
+    background-size: 1360px 1033px;
+    height: 940px;
+    width: 1360px;
+    top: 0px;
+  }
+  .main-description .boy-smile {
+    top: 22px;
+    left: 128px;
+  }
+  .main-description .boy-hands {
+    left: 150px;
+    top: 178px;
+  }
+  .main-description .texts {
+    left: 100px;
   }
   .about .about-description {
     padding-top: 150px;
@@ -942,15 +987,19 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-  .description-text {
+  .nav-menu {
+    display: none;
+  }
+  .main-description {
+    height: 1280px;
+  }
+  .main-description .description-text {
     background-image: url("../img/Path 47.svg");
     background-size: cover;
     width: calc(100% + 200px);
     height: 1250px;
     left: -140px;
-  }
-  .main-description {
-    height: 1280px;
+    top: 45px;
   }
   .main-description .texts .sub-header {
     font-size: 30px;
@@ -1063,6 +1112,18 @@ h2 {
   h2 {
     font-size: 70px;
     line-height: 70px;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation .with-sub-menu {
+    margin-top: 0;
+    width: 230px;
+  }
+  .navigation .with-sub-menu .sub-menu {
+    display: none;
   }
   .specialists-consultation {
     background-color: #89c069;
