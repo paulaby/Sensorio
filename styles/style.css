@@ -348,7 +348,7 @@ h2 {
       grid-template-rows: auto;
   gap: 0;
   min-height: 207px;
-      grid-template-areas: "picture-1 picture-2" "picture-3 picture-3" "picture-4 picture-5";
+      grid-template-areas: "picture-1 picture-2" "picture-3 picture-3" "picture-4 picture-5";
 }
 
 .gallery .column-2 {
@@ -361,7 +361,7 @@ h2 {
       grid-template-rows: auto;
   gap: 0;
   min-height: 207px;
-      grid-template-areas: "picture-6 picture-7" "picture-8 picture-7" "picture-8 picture-9";
+      grid-template-areas: "picture-6 picture-7" "picture-8 picture-7" "picture-8 picture-9";
 }
 
 .gallery .column-1 .picture,
@@ -469,7 +469,7 @@ h2 {
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1 fr 1fr;
       grid-template-rows: 1fr 1 fr 1fr;
-      grid-template-areas: "media" "hours" "contact";
+      grid-template-areas: "media" "hours" "contact";
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
