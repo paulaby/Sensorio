@@ -595,9 +595,9 @@ h2 {
     height: 100%;
     background-size: cover;
     background-position-y: center;
-    border-radius: 0 0 33px 33px;
     grid-area: pop-image;
     background-repeat: no-repeat;
+    border-radius: 0 0 33px 33px;
   }
 }
 
@@ -903,6 +903,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "pop-image pop-desc";
+    border-radius: 33px;
   }
   .info-about-services {
     justify-content: center;
@@ -1155,6 +1156,7 @@ h2 {
   .popup.visible {
     min-height: 80vh;
     height: auto;
+    overflow-y: scroll;
     .popup-heading {
       font-size: 70px;
       line-height: 70px;
@@ -1177,7 +1179,6 @@ h2 {
       height: 100%;
       background-size: cover;
       background-position-x: -100px;
-      border-radius: 33px;
       grid-area: pop-image;
       background-repeat: no-repeat;
     }
@@ -1461,5 +1462,11 @@ h2 {
 
   .specialists {
     margin-top: -175px;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .popup.visible {
+    height: 80vh;
   }
 }
