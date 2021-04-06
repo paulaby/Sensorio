@@ -577,6 +577,7 @@ h2 {
   .popup-description {
     padding: 1rem;
     text-align: left;
+    overflow-y: scroll;
   }
   .popup-heading {
     font-size: 35px;
@@ -898,7 +899,9 @@ h2 {
     flex-direction: row;
     margin-top: 45px;
   }
-
+  .popup .popup-image {
+    border-radius: 33px;
+  }
   .popup .popup-content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -1156,7 +1159,6 @@ h2 {
   .popup.visible {
     min-height: 80vh;
     height: auto;
-    overflow-y: scroll;
     .popup-heading {
       font-size: 70px;
       line-height: 70px;
