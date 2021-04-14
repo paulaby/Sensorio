@@ -82,6 +82,10 @@ h2 {
   .with-sub-menu {
     margin-top: 70px;
   }
+
+  .media-icon-navbar {
+    display: none;
+  }
 }
 
 .mobile-media {
@@ -953,6 +957,15 @@ h2 {
   .navigation {
     display: block;
     float: right;
+    li {
+      align-self: center;
+      height: 25px;
+    }
+    .media-icon-navbar {
+      display: block;
+      width: 25px;
+      vertical-align: middle;
+    }
   }
 
   .mobile-logo,
@@ -980,8 +993,8 @@ h2 {
   .navigation .link {
     color: #fff8eb;
     display: inline-block;
-    line-height: 34px;
-    margin: 0 15px;
+    line-height: 25px;
+    margin: 0 8px;
     font-size: 16px;
     transition: color 0.3s ease;
   }
@@ -1133,11 +1146,17 @@ h2 {
     height: 1440px;
   }
 
+  .navigation .media-icon-navbar {
+    width: 35px;
+  }
+  .navigation li {
+    height: 35px;
+  }
   .navigation .link,
   .sub-menu {
     color: #fff8eb;
     display: inline-block;
-    line-height: 34px;
+    line-height: 35px;
     margin: 0 15px;
     font-size: 25px;
     transition: color 0.3s ease;
