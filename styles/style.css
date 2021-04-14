@@ -1285,8 +1285,7 @@ h2 {
     width: 330px;
     padding: 0;
   }
-  .footer .contact,
-  .footer .media {
+  .footer .contact {
     -ms-flex-item-align: self-start;
         -ms-grid-row-align: self-start;
         align-self: self-start;
