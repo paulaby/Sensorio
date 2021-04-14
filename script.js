@@ -203,7 +203,7 @@ const services = [
     name: 'Diagnoza Si',
     photo: 'diagnoza-si.jpg',
 
-    price: 'Cena: 300 zł (3-4 spotkania)',
+    price: 'Cena: 300 zł (2-3 spotkania)',
     id: 1,
     description: `Diagnoza procesów integracji sensorycznej to wywiad z rodzicami, szczegółowa obserwacja zachowania dziecka, zastosowanie odpowiednich testów oraz analiza ich wyników.<br>
     Głównym celem diagnozy jest określenie czy u podłoża trudności dziecka leżą zaburzenia procesów integracji sensorycznej. <br>
@@ -212,7 +212,7 @@ const services = [
   }, {
     name: 'Diagnoza logopedyczna',
     photo: 'diagnoza-logopedy.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 150 zł (2 spotkania)',
     id: 2,
     description: `Głównym celem diagnozy logopedycznej jest rozpoznanie z jakimi zaburzeniami mowy mamy do czynienia u pacjenta.<br>
   Wstępne badanie polega na ocenie poziomu rozwoju mowy, określeniu sfer i rozmiaru jego opóźnienia oraz rozpoznaniu rodzaju zaburzeń.<br>    
@@ -222,7 +222,7 @@ const services = [
   }, {
     name: 'Diagnoza psychologiczna',
     photo: 'diagnoza-psycholog.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 150 zł (2 spotkania)',
     id: 3,
     description: `Polega na rozpoznaniu przyczyn trudności w uczeniu się lub w zachowaniu dziecka. <br>
     Ma na celu wyjaśnienie czynników i mechanizmów psychologicznych wpływających na powstawanie zgłaszanych problemów oraz genezy tychże problemów.<br>
@@ -233,7 +233,7 @@ const services = [
     name: 'Terapia Si',
     photo: 'terapia-si.jpg',
 
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 80zł/60min lub 50zł/30min',
     id: 4,
     description: `Terapia SI to grupa aktywności, ćwiczeń i zabaw mających na celu stymulować ośrodek układu nerwowego oraz mózg dziecka.
     Zaletą odbywających się zajęć jest wykorzystanie różnego rodzaju huśtawek, lin, deskorolki, drabinek do wspinania, trampoliny, basenu z piłeczkami i innych. 
@@ -242,8 +242,7 @@ const services = [
   }, {
     name: 'Terapia logopedyczna',
     photo: 'terapia-logopedyczna.jpg',
-
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 100zł/60min lub 60zł/30min',
     id: 5,
     description: `Ma na celu usprawnienie funkcji komunikacyjnej poprzez stopniowe korygowanie zakłóceń występujących podczas porozumiewania się. Pomocna jest również przy wskazaniu autyzmu, porażenia mózgowego czy jąkania.
     Każdorazowo terapia poprzedzona jest szczegółowym wywiadem, obserwacją oraz przeprowadzeniem testów. Takie działania umożliwiają podjęcie fachowej diagnozy i opracowaniu skutecznego programu leczenia wad.
@@ -256,7 +255,7 @@ const services = [
   }, {
     name: 'Terapia psychologiczna',
     photo: 'terapia-psycholog.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena:  100zł/60min lub 60zł/30min',
     id: 6,
     description: `Terapia psychologiczna ma na celu pomóc w rozwiązaniu problemu związanego ze zdrowym rozwojem dziecka oraz zdrowej relacji rodzice-dziecko.
 
@@ -273,7 +272,7 @@ const services = [
   }, {
     name: 'Terapia ręki',
     photo: 'terapia-reki.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 80zł/60min lub 50zł/30min',
     id: 7,
     description: `
     Terapia opierająca się w głównej mierze na usprawnianiu małej motoryki, czyli precyzyjnych ruchów rąk, dłoni i palców.
@@ -301,7 +300,7 @@ const services = [
   {
     name: 'Pedagog',
     photo: 'pedagog.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 120/60min lub 70zł/30min',
     id: 8,
     description: `
     Podczas zajęć pedagogicznych, wspieramy dziecko we wszystkich sferach jego rozwoju stymulując rozwój poznawczy, emocjonalny i społeczny. Każda aktywność dobierana jest indywidualnie w zależności od potrzeb dziecka tak, by jednocześnie edukowała oraz dawała radość i zabawę. Bawiąc się z dziećmi szczególną uwagę zwracamy na usprawnianie funkcji słuchowych, wzrokowych, ruchowych i ich właściwej koordynacji. Stymulujemy i wspieramy rozwój potrzeb i oczekiwań dzieci związanych z poznawaniem świata, potrzebą aktywności.
@@ -322,7 +321,7 @@ const services = [
   {
     name: 'Gotowość szkolna',
     photo: 'gotowosc-szkolna.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 200 zł (2h + opis)',
     id: 9,
     description: `
     Gotowość szkolna to nic innego jak dojrzałość dziecka do podjęcia nauki w szkole.
@@ -338,7 +337,7 @@ const services = [
   {
     name: 'Trening Umiejętności Społecznych',
     photo: 'trening-um-spolecznych.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 80zł/90min',
     id: 10,
     description: `
     Zajęcie te mają na celu nauczenie dzieci prawidłowych zachowań społecznych.<br>
@@ -352,7 +351,7 @@ const services = [
   {
     name: 'Gimnastyka korekcyjna',
     photo: 'gimnastyka-korekcyjna.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 40zł/50min',
     id: 11,
     description: `
     Zestaw ćwiczeń mający na celu skorygowanie wad postawy.
@@ -373,7 +372,7 @@ const services = [
     name: 'Fizjoterapia',
     photo: 'fizjoterapia.jpg',
 
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 120zł/60min lub 70zł/30min',
     id: 12,
     description: `
     Ma na celu przywrócenie pełnej sprawności ruchowej i motorycznej. <br>
@@ -387,20 +386,24 @@ const services = [
   {
     name: 'Sensoplastyka',
     photo: 'sensoplastyka.jpg',
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 50zł/spotkanie',
     id: 13,
     description: `
-    Głównym celem diagnozy logopedycznej jest rozpoznanie z jakimi zaburzeniami mowy mamy do czynienia u pacjenta. <br>
-    Wstępne badanie polega na ocenie poziomu rozwoju mowy, określeniu sfer i rozmiaru jego opóźnienia oraz rozpoznaniu rodzaju zaburzeń.<br>
-    Jednym z ważniejszych elementów postępowania diagnostycznego jest obserwacja, w trakcie której logopeda ustala poziom kompetencji językowych dziecka i ich zgodność z normami rozwojowymi.<br>
-    Na podstawie zebranych danych logopeda ustala zakres potrzeb, rodzaj niezbędnej pomocy oraz opracowuje program terapii.<br>
+    Metoda stymulacji sensorycznej, która ma na celu poznawanie otaczającego nas świata. <br>
+    Łączy w sobie silne doznania dotykowe, wzrokowe, smakowe i słuchowe.<br>
+    Stymuluje proces twórczy dziecka poprzez zabawę.<br>
+    W metodzie tej wykorzystywane są tylko naturalne składniki które mogą być bezpiecznie dotykane czy nawet spróbowane przez dziecko. <br>
+    Metoda ta wpływa na rozwój dziecka, dzięki czemu wspieramy rozwój jego zmysłów, rozwój poznawczy.<br>
+    Ma również duży wpływ na rozwój ośrodka mowy i ruchu (w przypadku niemowląt przygotowanie do nauki chodzenia).<br>
+    Zajęcia umożliwiają ponadto budowanie świadomości ciała i przestrzeni dziecka oraz budowanie poczucia bezpieczeństwa poprzez pogłębianie więzi emocjonalnej z dzieckiem.
+    
     
         `,
   },
   {
     name: 'Wydanie opinii',
     photo: 'wydanie-opinii.jpg',
-    price: 'Cena: 80 zł (1 spotkanie)',
+    price: 'Cena: 50zł',
     id: 14,
     description: `
     Każdorazowo proces diagnostyki dziecka kończy się wydaniem specjalistycznej opinii.<br>
