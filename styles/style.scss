@@ -962,8 +962,9 @@ h2 {
       height: 25px;
     }
     .media-icon-navbar {
-      display: block;
+      display: flex;
       width: 25px;
+      height: 25px;
       vertical-align: middle;
     }
   }
@@ -1147,6 +1148,7 @@ h2 {
 
   .navigation .media-icon-navbar {
     width: 35px;
+    height: 35px;
   }
   .navigation li {
     height: 35px;

@@ -1102,8 +1102,11 @@ h2 {
     height: 25px;
   }
   .navigation .media-icon-navbar {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 25px;
+    height: 25px;
     vertical-align: middle;
   }
   .mobile-logo,
@@ -1295,6 +1298,7 @@ h2 {
   }
   .navigation .media-icon-navbar {
     width: 35px;
+    height: 35px;
   }
   .navigation li {
     height: 35px;
