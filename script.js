@@ -202,49 +202,47 @@ const services = [
   {
     name: 'Diagnoza Si',
     photo: 'diagnoza-si.jpg',
-
-    price: 'Cena: 300 zł (2-3 spotkania)',
+    price: 'Cena: 300zł (2-3 spotkania)',
     id: 1,
     description: `Diagnoza procesów integracji sensorycznej to wywiad z rodzicami, szczegółowa obserwacja zachowania dziecka, zastosowanie odpowiednich testów oraz analiza ich wyników.<br>
     Głównym celem diagnozy jest określenie czy u podłoża trudności dziecka leżą zaburzenia procesów integracji sensorycznej. <br>
     Na podstawie wyników uzyskanych z diagnozy terapeuta przygotowuje szczegółowy program terapeutyczny dla dziecka.<br>
-    Składa się 3-4 spotkań podczas których terapeuta obserwuje spontaniczne zachowanie dziecka podczas swobodnej zabawy, jego reakcje na stymulację sensoryczną (użycie specjalistycznego sprzętu) oraz wykonuje określone testy.`,
+    Składa się 2-3 spotkań podczas których terapeuta obserwuje spontaniczne zachowanie dziecka podczas swobodnej zabawy, jego reakcje na stymulację sensoryczną (użycie specjalistycznego sprzętu) oraz wykonuje określone testy.`,
   }, {
     name: 'Diagnoza logopedyczna',
     photo: 'diagnoza-logopedy.jpg',
-    price: 'Cena: 150 zł (2 spotkania)',
+    price: 'Cena: 150zł (2 spotkania)',
     id: 2,
     description: `Głównym celem diagnozy logopedycznej jest rozpoznanie z jakimi zaburzeniami mowy mamy do czynienia u pacjenta.<br>
-  Wstępne badanie polega na ocenie poziomu rozwoju mowy, określeniu sfer i rozmiaru jego opóźnienia oraz rozpoznaniu rodzaju zaburzeń.<br>    
+    Wstępne badanie polega na ocenie poziomu rozwoju mowy, określeniu sfer i rozmiaru jego opóźnienia oraz rozpoznaniu rodzaju zaburzeń.<br>    
     Jednym z ważniejszych elementów postępowania diagnostycznego jest obserwacja, w trakcie której logopeda ustala poziom kompetencji językowych dziecka i ich zgodność z normami rozwojowymi.<br>    
     Na podstawie zebranych danych logopeda ustala zakres potrzeb, rodzaj niezbędnej pomocy oraz opracowuje program terapii.
     `,
   }, {
     name: 'Diagnoza psychologiczna',
     photo: 'diagnoza-psycholog.jpg',
-    price: 'Cena: 150 zł (2 spotkania)',
+    price: 'Cena: 150zł (2 spotkania)',
     id: 3,
     description: `Polega na rozpoznaniu przyczyn trudności w uczeniu się lub w zachowaniu dziecka. <br>
     Ma na celu wyjaśnienie czynników i mechanizmów psychologicznych wpływających na powstawanie zgłaszanych problemów oraz genezy tychże problemów.<br>
-    Jest idealnym narzędziem do poznania dziecka, jego możliwości rozwoju, zachowań w różnych sytuacjach czy ewentualnych problemów w relacjach między rówieśnikami lub rodzinie.
+    Jest idealnym narzędziem do poznania dziecka, jego możliwości rozwoju, zachowań w różnych sytuacjach czy ewentualnych problemów w relacjach między rówieśnikami lub rodzinie.<br>
     Określa udział czynników organicznych, środowiskowych i psychologicznych w powstawaniu i podtrzymywaniu się nieprawidłowych form zachowań i funkcjonowania.<br>
     Szczegółowy wywiad pozwala na wstępne zdiagnozowanie problemu i wskazanie odpowiednich form pomocy terapeutycznej.`,
   }, {
     name: 'Terapia Si',
     photo: 'terapia-si.jpg',
-
     price: 'Cena: 80zł/60min lub 50zł/30min',
     id: 4,
-    description: `Terapia SI to grupa aktywności, ćwiczeń i zabaw mających na celu stymulować ośrodek układu nerwowego oraz mózg dziecka.
-    Zaletą odbywających się zajęć jest wykorzystanie różnego rodzaju huśtawek, lin, deskorolki, drabinek do wspinania, trampoliny, basenu z piłeczkami i innych. 
-    Głównym celem ćwiczeń jest balansowanie na granicy możliwości dziecka, które poprawia organizację ośrodkowego układu nerwowego i wpływa na zmianę zachowania w sferze motorycznej i emocjonalnej.
+    description: `Terapia SI to grupa aktywności, ćwiczeń i zabaw mających na celu stymulować ośrodek układu nerwowego oraz mózg dziecka. <br>
+    Zaletą odbywających się zajęć jest wykorzystanie różnego rodzaju huśtawek, lin, deskorolki, drabinek do wspinania, trampoliny, basenu z piłeczkami i innych. <br>
+    Głównym celem ćwiczeń jest balansowanie na granicy możliwości dziecka, które poprawia organizację ośrodkowego układu nerwowego i wpływa na zmianę zachowania w sferze motorycznej i emocjonalnej.<br>
     Zaletą tej terapii jest jej indywidualny charakter dostosowany do dla każdego dziecka i jego konkretnych potrzeb.`,
   }, {
     name: 'Terapia logopedyczna',
     photo: 'terapia-logopedyczna.jpg',
     price: 'Cena: 100zł/60min lub 60zł/30min',
     id: 5,
-    description: `Ma na celu usprawnienie funkcji komunikacyjnej poprzez stopniowe korygowanie zakłóceń występujących podczas porozumiewania się. Pomocna jest również przy wskazaniu autyzmu, porażenia mózgowego czy jąkania.
+    description: `Ma na celu usprawnienie funkcji komunikacyjnej poprzez stopniowe korygowanie zakłóceń występujących podczas porozumiewania się. Pomocna jest również przy wskazaniu autyzmu, porażenia mózgowego czy jąkania.<br>
     Każdorazowo terapia poprzedzona jest szczegółowym wywiadem, obserwacją oraz przeprowadzeniem testów. Takie działania umożliwiają podjęcie fachowej diagnozy i opracowaniu skutecznego programu leczenia wad.
     
     Korzyści terapii:
@@ -257,17 +255,12 @@ const services = [
     photo: 'terapia-psycholog.jpg',
     price: 'Cena:  100zł/60min lub 60zł/30min',
     id: 6,
-    description: `Terapia psychologiczna ma na celu pomóc w rozwiązaniu problemu związanego ze zdrowym rozwojem dziecka oraz zdrowej relacji rodzice-dziecko.
-
-    Na pierwszym spotkaniu psycholog  przeprowadza krótki wywiad z rodzicami w celu wykrycia i zdiagnozowania problemu. 
-    
-    Dopiero na kolejnym spotkaniu przeprowadza indywidualne rozmowy z dzieckiem.
-    
-    Celem jest stworzenie bezpiecznej relacji między dzieckiem a psychologiem. 
-    
-    Relacja taka pozwoli na zebranie informacji na temat sytuacji psychologicznej dziecka oraz relacji jakie panują w jego otoczeniu m.in. w domu, szkole.
-    
-    Dzięki takim zabiegom psycholog jest w stanie zaproponować najlepsze rozwiązanie dla dalszego przebiegu spotkań.
+    description: `Terapia psychologiczna ma na celu pomóc w rozwiązaniu problemu związanego ze zdrowym rozwojem dziecka oraz zdrowej relacji rodzice-dziecko. <br>
+    Na pierwszym spotkaniu psycholog przeprowadza krótki wywiad z rodzicami w celu wykrycia i zdiagnozowania problemu. <br>
+    Dopiero na kolejnym spotkaniu przeprowadza indywidualne rozmowy z dzieckiem.<br>
+    Celem jest stworzenie bezpiecznej relacji między dzieckiem a psychologiem. <br>
+    Relacja taka pozwoli na zebranie informacji na temat sytuacji psychologicznej dziecka oraz relacji jakie panują w jego otoczeniu m.in. w domu, szkole.<br>
+    Dzięki takim zabiegom psycholog jest w stanie zaproponować najlepsze rozwiązanie dla dalszego przebiegu spotkań.<br>
     `,
   }, {
     name: 'Terapia ręki',
@@ -278,57 +271,57 @@ const services = [
     Terapia opierająca się w głównej mierze na usprawnianiu małej motoryki, czyli precyzyjnych ruchów rąk, dłoni i palców.
 <br>
    <b> Terapia przeznaczona jest dla dzieci: </b>
-   <br> + z zaburzeniem napięcia mięśniowego,
-   <br> + z zaburzeniem precyzji ruchu (trudności w drobnych ruchach),
-   <br> + z brakiem koordynacji ruchów kończyny górnej,
-   <br> + z zaburzeniami koordynacji wzrokowo-ruchowej,
-   <br> + z opóźnieniem w zakresie czynności samoobsługowych,
-   <br> + z zaburzeniami zmysłu dotyku (dziecko nie lubi zabaw np. z plasteliną, nie lubi lekkiego dotyku i nowych ubrań, wkłada przedmioty do ust, wybiera twarde przedmioty).
+   <br> • z zaburzeniem napięcia mięśniowego,
+   <br> • z zaburzeniem precyzji ruchu (trudności w drobnych ruchach),
+   <br> • z brakiem koordynacji ruchów kończyny górnej,
+   <br> • z zaburzeniami koordynacji wzrokowo-ruchowej,
+   <br> • z opóźnieniem w zakresie czynności samoobsługowych,
+   <br> • z zaburzeniami zmysłu dotyku (dziecko nie lubi zabaw np. z plasteliną, nie lubi lekkiego dotyku i nowych ubrań, wkłada przedmioty do ust, wybiera twarde przedmioty).
     <br>
    <b> Co wnoszą / korzyści: </b>
-   <br> + rozwijanie ogólnej koordynacji ruchowej;
-   <br> + rozwijanie koordynacji obustronnej; 
-   <br> + udoskonalenie sprawności manipulacyjnej ręki; 
-   <br> + doskonalenie umiejętności chwytu;
-   <br> + doskonalenie techniki pisania; 
-   <br> + poprawa koncentracji; 
-   <br> + wzmacnianie poczucia własnej wartości poprzez 
-   <br> + budzenie wiary we własne możliwości.
+   <br> • rozwijanie ogólnej koordynacji ruchowej;
+   <br> • rozwijanie koordynacji obustronnej; 
+   <br> • udoskonalenie sprawności manipulacyjnej ręki; 
+   <br> • doskonalenie umiejętności chwytu;
+   <br> • doskonalenie techniki pisania; 
+   <br> • poprawa koncentracji; 
+   <br> • wzmacnianie poczucia własnej wartości poprzez budzenie wiary we własne możliwości.
 
         `,
   },
   {
     name: 'Pedagog',
     photo: 'pedagog.jpg',
-    price: 'Cena: 120/60min lub 70zł/30min',
+    price: 'Cena: 120zł/60min lub 70zł/30min',
     id: 8,
     description: `
-    Podczas zajęć pedagogicznych, wspieramy dziecko we wszystkich sferach jego rozwoju stymulując rozwój poznawczy, emocjonalny i społeczny. Każda aktywność dobierana jest indywidualnie w zależności od potrzeb dziecka tak, by jednocześnie edukowała oraz dawała radość i zabawę. Bawiąc się z dziećmi szczególną uwagę zwracamy na usprawnianie funkcji słuchowych, wzrokowych, ruchowych i ich właściwej koordynacji. Stymulujemy i wspieramy rozwój potrzeb i oczekiwań dzieci związanych z poznawaniem świata, potrzebą aktywności.
+    Podczas zajęć pedagogicznych, wspieramy dziecko we wszystkich sferach jego rozwoju stymulując rozwój poznawczy, emocjonalny i społeczny. 
+    Każda aktywność dobierana jest indywidualnie w zależności od potrzeb dziecka tak, by jednocześnie edukowała oraz dawała radość i zabawę. 
+    Bawiąc się z dziećmi szczególną uwagę zwracamy na usprawnianie funkcji słuchowych, wzrokowych, ruchowych i ich właściwej koordynacji. 
+    Stymulujemy i wspieramy rozwój potrzeb i oczekiwań dzieci związanych z poznawaniem świata, potrzebą aktywności.
 
     Zadaniem pedagoga jest:
-   <br> + pogłębianie oraz uzupełnianie działań dydaktyczno-wychowawczych prowadzonych przez wychowawców w placówce,
-   <br> + rozpoznawanie indywidualnych potrzeb dzieci,
-   <br> + prowadzenie działań diagnostycznych, określanie form i sposobów udzielania dzieciom pomocy pedagogicznej,
-   <br> + połączenie działań służących wspomaganiu rozwoju dzieci z deficytami rozwojowymi.
+   <br> • pogłębianie oraz uzupełnianie działań dydaktyczno-wychowawczych prowadzonych przez wychowawców w placówce,
+   <br> • rozpoznawanie indywidualnych potrzeb dzieci,
+   <br> • prowadzenie działań diagnostycznych, określanie form i sposobów udzielania dzieciom pomocy pedagogicznej,
+   <br> • połączenie działań służących wspomaganiu rozwoju dzieci z deficytami rozwojowymi.
     
    <br> Cele terapii pedagogicznej:
-   <br> + stymulowanie rozwoju dziecka - jest to cel nadrzędny,
-   <br> + wyrównywanie braków w umiejętnościach,
-   <br> + eliminowanie niepowodzeń emocjonalno-społecznych i ich konsekwencji.
-
-        `,
+   <br> • stymulowanie rozwoju dziecka - jest to cel nadrzędny,
+   <br> • wyrównywanie braków w umiejętnościach,
+   <br> • eliminowanie niepowodzeń emocjonalno-społecznych i ich konsekwencji.
+  `,
   },
   {
     name: 'Gotowość szkolna',
     photo: 'gotowosc-szkolna.jpg',
-    price: 'Cena: 200 zł (2h + opis)',
+    price: 'Cena: 200zł (2h + opis)',
     id: 9,
     description: `
-    Gotowość szkolna to nic innego jak dojrzałość dziecka do podjęcia nauki w szkole.
-    Na gotowość szkolną dzieci składają się osiągnięcia rozwojowe rozpatrywane w strefie: fizycznej, umysłowej i emocjonalno-społecznej.
-    Gotowość szkolna pomaga stwierdzić czy dziecko jest gotowe do pójścia do szkoły czy też nie. 
-    <br>
-    Badanie możliwości do podjęcia nauki w szkole polega na obserwacja zachowania dziecka przez nauczyciela zerówki lub przedszkola. 
+    Gotowość szkolna to nic innego jak dojrzałość dziecka do podjęcia nauki w szkole.<br>
+    Na gotowość szkolną dzieci składają się osiągnięcia rozwojowe rozpatrywane w strefie: fizycznej, umysłowej i emocjonalno-społecznej.<br>
+    Gotowość szkolna pomaga stwierdzić czy dziecko jest gotowe do pójścia do szkoły czy też nie. <br>
+    Badanie możliwości do podjęcia nauki w szkole polega na obserwacji zachowania dziecka przez nauczyciela zerówki lub przedszkola. <br>
     Zdolność dziecka do podjęcia nauki szkolnej jest oceniana przez wykonanie specjalnych testów. <br>
     Na ich podstawie rodzice dowiadują się czy ich dziecko jest samodzielne oraz czy nie ma innych problemów mogących uniemożliwić pójście do szkoły.
 
@@ -340,8 +333,8 @@ const services = [
     price: 'Cena: 80zł/90min',
     id: 10,
     description: `
-    Zajęcie te mają na celu nauczenie dzieci prawidłowych zachowań społecznych.<br>
-    Polegają one na niwelowaniu różnych trudności od lęku w kontakcie z innymi aż po nieśmiałość.
+    Zajęcia te mają na celu nauczenie dzieci prawidłowych zachowań społecznych.<br>
+    Polegają one na niwelowaniu różnych trudności od lęku w kontakcie z innymi aż po nieśmiałość.<br>
     Dzieci uczone są prawidłowej komunikacji, zasad przyjmowania i radzenie sobie z krytyką oraz kontroli nad swoimi emocjami.<br>
     Ponadto zajęcia umożliwiają zdobycie wiedzy potrzebnej do okazywania szacunku innym oraz wiary w swoje i innych możliwości.<br>
     Umiejętności społeczne będą ćwiczone poprzez zabawę oraz możliwość doświadczania sytuacji społecznych w bezpiecznych warunkach warsztatowych.
@@ -354,18 +347,12 @@ const services = [
     price: 'Cena: 40zł/50min',
     id: 11,
     description: `
-    Zestaw ćwiczeń mający na celu skorygowanie wad postawy.
-
-    Jest to profilaktyka i korekta zaburzeń statyki ciała i schorzeń kostno-stawowych, zwiększenie wytrzymałości organizmu, siły mięśni oraz kształtowanie i utrwalanie  nawyku utrzymywania prawidłowej postawy. 
-    
-    Jedną z ważnych ról w gimnastyce korekcyjnej pełnią także ćwiczenia oddechowe rozwijające klatkę piersiową, płuca oraz poprawiające krążenie i dotleniające organizm.
-    
-    Gimnastyka korekcyjna wzmacnia mięśnie grzbietu i brzucha, odpowiedzialne za utrzymanie kręgosłupa we właściwym położeniu oraz za utrzymanie właściwej postawy, dlatego ważne jest, żeby regularnie wykonywać zalecone ćwiczenia.
-    
-    Skuteczne podjęte działania mogą całkowicie wyleczyć pacjenta lub w znacznym stopniu skorygować wady.
-    
+    Zestaw ćwiczeń mający na celu skorygowanie wad postawy.<br>
+    Jest to profilaktyka i korekta zaburzeń statyki ciała i schorzeń kostno-stawowych, zwiększenie wytrzymałości organizmu, siły mięśni oraz kształtowanie i utrwalanie  nawyku utrzymywania prawidłowej postawy. <br>
+    Jedną z ważnych ról w gimnastyce korekcyjnej pełnią także ćwiczenia oddechowe rozwijające klatkę piersiową, płuca oraz poprawiające krążenie i dotleniające organizm.<br>
+    Gimnastyka korekcyjna wzmacnia mięśnie grzbietu i brzucha, odpowiedzialne za utrzymanie kręgosłupa we właściwym położeniu oraz za utrzymanie właściwej postawy, dlatego ważne jest, żeby regularnie wykonywać zalecone ćwiczenia.<br>
+    Skuteczne podjęte działania mogą całkowicie wyleczyć pacjenta lub w znacznym stopniu skorygować wady.<br>
     Ma zastosowanie przy wadach postawy m.in. garbienie się oraz przy skrzywieniach kręgosłupa. 
-    
         `,
   },
   {
@@ -377,7 +364,7 @@ const services = [
     description: `
     Ma na celu przywrócenie pełnej sprawności ruchowej i motorycznej. <br>
     Polega on na leczeniu dysfunkcji układu  nerwowo mięśniowego, mięśniowo szkieletowego, oddechowego i sercowo naczyniowego.<br>
-    Fizjoterapia jest jedną z formą leczenia wszelkich zmian po przebytych udarach , urazach wielonarządowych, złamaniach kości, uszkodzeniu stawów , urazach rdzenia kręgowego. <br>
+    Fizjoterapia jest jedną z formą leczenia wszelkich zmian po przebytych udarach , urazach wielonarządowych, złamaniach kości, uszkodzeniu stawów, urazach rdzenia kręgowego. <br>
     Stosowana może być również przy leczeniu schorzeń przewlekłych czy astmy.<br>
     Również wszelkie zmiany czy bóle kręgosłupa mogą być skutecznie usunięte dzięki zastosowaniu odpowiednich metod fizjoterapii. <br>
     Fizjoterapia przyczynia się do wznowienie codziennych czynności, w tym pracy, szkoły, zajęć rekreacyjnych i opieki osobistej.
@@ -392,7 +379,7 @@ const services = [
     Metoda stymulacji sensorycznej, która ma na celu poznawanie otaczającego nas świata. <br>
     Łączy w sobie silne doznania dotykowe, wzrokowe, smakowe i słuchowe.<br>
     Stymuluje proces twórczy dziecka poprzez zabawę.<br>
-    W metodzie tej wykorzystywane są tylko naturalne składniki które mogą być bezpiecznie dotykane czy nawet spróbowane przez dziecko. <br>
+    W metodzie tej wykorzystywane są tylko naturalne składniki, które mogą być bezpiecznie dotykane czy nawet spróbowane przez dziecko. <br>
     Metoda ta wpływa na rozwój dziecka, dzięki czemu wspieramy rozwój jego zmysłów, rozwój poznawczy.<br>
     Ma również duży wpływ na rozwój ośrodka mowy i ruchu (w przypadku niemowląt przygotowanie do nauki chodzenia).<br>
     Zajęcia umożliwiają ponadto budowanie świadomości ciała i przestrzeni dziecka oraz budowanie poczucia bezpieczeństwa poprzez pogłębianie więzi emocjonalnej z dzieckiem.
@@ -409,12 +396,12 @@ const services = [
     Każdorazowo proces diagnostyki dziecka kończy się wydaniem specjalistycznej opinii.<br>
     W Naszym Centrum mogą Państwo otrzymać opinie:
     
-   <br> - logopedyczną,
-   <br> - pedagogiczną,
-   <br> - psychologiczną,
-   <br> - rozwoju procesów integracji sensorycznej,
-   <br> - o gotowości do podjęcia nauki szkolnej,
-   <br> - fitoterapeutyczną.
+   <br> • logopedyczną,
+   <br> • pedagogiczną,
+   <br> • psychologiczną,
+   <br> • rozwoju procesów integracji sensorycznej,
+   <br> • o gotowości do podjęcia nauki szkolnej,
+   <br> • fitoterapeutyczną.
         `,
   },
 ]
