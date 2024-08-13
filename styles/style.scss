@@ -351,13 +351,13 @@ h2 {
   }
 
   .picture.lazy {
-    background-image: none;
-    background-color: $green;
+    // background-image: none;
+    // background-color: $green;
   }
 
   .picture-1 {
     grid-area: picture-1;
-    background-image: url("../img/photos/Zdjecie1.jpg");
+    background-image: url("../img/photos/Zdjecie1.jpg") !important;
   }
 
   .picture-2 {

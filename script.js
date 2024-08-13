@@ -156,7 +156,6 @@ const imageBox = document.querySelector('.image-box')
 const nextBtn = document.querySelector('.next-btn')
 const prevBtn = document.querySelector('.prev-btn')
 
-
 let currentImageId = 0;
 
 imageView.addEventListener('click', function () {
